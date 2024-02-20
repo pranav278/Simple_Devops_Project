@@ -1,10 +1,18 @@
+
 ## Setup Jenkins on Amazon Linux Server
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0ef2d7b9-7b04-438c-a454-1ced049ad711)
+1. **Launch an Amazon Linux 2 Instance**:
+   - Log in to the AWS Management Console.
+   - Navigate to the EC2 dashboard.
+   - Click on "Launch Instance" and choose "Amazon Linux 2 AMI".
+   - Follow the steps in the instance launch wizard, select your instance type, configure instance details, add storage, configure security groups, and review.
+   - When configuring the security group, create a new security group with the necessary rules (HTTP, HTTPS, SSH).
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8a4cfc23-b1d9-4e87-9f68-2aa82d4b8c60)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0ef2d7b9-7b04-438c-a454-1ced049ad711)
 
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bc25a35a-0554-4ae7-bdde-c189cb86a913)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8a4cfc23-b1d9-4e87-9f68-2aa82d4b8c60)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bc25a35a-0554-4ae7-bdde-c189cb86a913)
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b0964de4-769d-4123-ad28-8d52c0300407)
 
