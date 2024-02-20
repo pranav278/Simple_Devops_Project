@@ -126,6 +126,26 @@ Once Login you will see this console
       - We can  See now Jenkins Home Page
       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/83703df6-4d65-4a66-b612-8370cd9d5b14)
 
+5. **Integrate Github with Jenkins**
+      1. Install Git on Jenkins Instance
+      2. Install Github Plugin on Jenkins GUI
+      3. Configure Git on Jenkins GUI
+
+## 1. Install Git on Jenkins Instance
+   1. Check Git Installed or Not
+   ```
+   git
+   ```
+   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a7e375b4-c765-4f64-9699-a3ee7e6500cb)
+
+   2. Install Git
+   ```
+   yum install git
+   ```
+   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d4a05786-a863-4bb2-914d-882027bfba55)
+
+
+
 
 
 
