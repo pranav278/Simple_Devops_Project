@@ -144,6 +144,11 @@ Once Login you will see this console
    ```
    ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d4a05786-a863-4bb2-914d-882027bfba55)
 
+## 2. Install Github Plugin on Jenkins GUI
+   1. Go to the Highlighted Path to Add Pluging
+   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0018a7e7-56dd-455d-8a0b-15797eee0474)
+      
+   Click on Install without Restart
 
 
 
