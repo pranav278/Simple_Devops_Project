@@ -81,6 +81,23 @@ Once Login you will see this console
        5. Check out java installed 
 
        ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bae4a747-ec48-4ac2-9902-ae5fa0128320)
+       - Here we see java is not present so we need to install
+     
+       6. By B
+       ```
+       amazon-linux-extras install java-openjdk11
+       ```
+       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6feccc3a-0226-4d7e-931a-588a9c1b137f)
+
+       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4c583822-fece-4162-841f-4397213bf8f6)
+      7. insatll jenkins
+      ```
+      yum install jenkins
+      ```
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f1016f9a-69b2-460c-a799-acc4c5a39692)
+
+
+
 
 
 
