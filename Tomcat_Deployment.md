@@ -95,6 +95,27 @@ Once Login you will see this console
       yum install jenkins
       ```
       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f1016f9a-69b2-460c-a799-acc4c5a39692)
+      8. Now check the status of Jenkins
+      ```
+      service jenkins status
+      ```
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fc2535b7-c01d-4e65-9d38-4ab5ab48da49)
+      9. Start the Jenkins
+      ```
+      service jenkins start
+      ```
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/73a7c66b-bdcd-4ffb-a1cb-35edbead01f4)
+      10. Go to the Security Group of Jenkins and Allow 8080 inbound rule
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/67ad246e-1f2a-442e-8fa4-0169a9833e91)
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9ce70d5e-5c36-4287-b861-d5c1f0587987)
+
+      11. Now access the Jenkins by hitting the Public ip on web Browser
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/45fd74cd-8829-4582-8a81-57a5461de8a6)
+
+
+
+
+
 
 
 
