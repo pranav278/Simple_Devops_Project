@@ -49,20 +49,38 @@ Once Login you will see this console
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/936e1c03-8f4f-45da-9093-976ff9078f3b)
 
-## Installation of Jenkins on Our Linux Server 
+3. **Installation of Jenkins on Our Linux Server**
+   1. To switch to the root user, you can use the 'sudo su -' command. This command essentially elevates your privileges to root, allowing you to execute commands as the root user.
 
-a. sudo su -
-6. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4bf635e9-3aa1-45c1-828e-49ae1f0ebb43)
+   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4bf635e9-3aa1-45c1-828e-49ae1f0ebb43)
 
-go to this link for installation links : https://pkg.jenkins.io/redhat-stable/
- 7. =![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d31b1310-b500-423d-9055-9d601ade9e25)
+   2. Go to this link for installation links : https://pkg.jenkins.io/redhat-stable/
+   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d31b1310-b500-423d-9055-9d601ade9e25)
 
- b. amazon-linux-extras install epel
+   3. To install the EPEL (Extra Packages for Enterprise Linux) repository on an Amazon Linux instance, you can use the `amazon-linux-extras` command. Here are the steps:
 
- 8. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e8f350cb-3a0c-448b-8b9d-4a5e63c5f7bc)
- check out java installed 
+       1. Connect to your Amazon Linux instance via SSH using MobaXterm or any other SSH client.
 
-![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bae4a747-ec48-4ac2-9902-ae5fa0128320)
+       2. Switch to the root user by running:
+       ```
+       sudo su -
+       ```
+
+       3. Install the EPEL repository using the `amazon-linux-extras` command:
+       ```
+       amazon-linux-extras install epel
+       ```
+
+       4. After running the command, it will prompt you to confirm the installation. Type `y` and press Enter to proceed with the installation.
+
+
+       - Now you have successfully installed the EPEL repository on your Amazon Linux instance. You can now use it to install additional packages available in the EPEL repository using the `yum` package manager.
+
+       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e8f350cb-3a0c-448b-8b9d-4a5e63c5f7bc)
+ 
+       5. Check out java installed 
+
+       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bae4a747-ec48-4ac2-9902-ae5fa0128320)
 
 
 
