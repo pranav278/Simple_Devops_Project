@@ -112,6 +112,23 @@ Once Login you will see this console
       11. Now access the Jenkins by hitting the Public ip on web Browser
       ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/45fd74cd-8829-4582-8a81-57a5461de8a6)
 
+4. **Setting Up Jenkins thing**
+
+
+      1. Password for Jenkins Stored in this Path : /var/lib/jenkins/secrets/initialAdminPassword
+      ```
+      cat /var/lib/jenkins/secrets/initialAdminPassword
+      ```
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/74b16420-2a88-4657-8b31-2f7ab60454c7)
+      2. After entering Password Click on Continue and We dont need any Plugins currently so Cancel it 
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b4d8cdbd-c875-46ff-99b3-0e81c7d9baa4)
+
+      - We can  See now Jenkins Home Page
+      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/83703df6-4d65-4a66-b612-8370cd9d5b14)
+
+
+
+
 
 
 
