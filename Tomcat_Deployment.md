@@ -149,6 +149,16 @@ Once Login you will see this console
    ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0018a7e7-56dd-455d-8a0b-15797eee0474)
       
    Click on Install without Restart
+   2. Add the Git Installation Configuration 
+   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5f62e98a-47ed-47a8-b022-032ea27502e0)
+
+   Click on Apply and SAVE
+
+6. **Integrate Maven with Jenkins**
+      1. Setup Maven on Jenkins Server
+      2. Setup Environment Variables ( JAVA_HOME, M2, M2_HOME )
+      3. Install Maven Plugin
+      4. Configure Maven And Java
 
 
 
