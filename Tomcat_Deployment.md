@@ -54,6 +54,11 @@ Once Login you will see this console
 
 
 
+
+
+
+
+
 ---
 
 ## Step 2:- Installation of Jenkins on Our Linux Server
