@@ -1,23 +1,32 @@
 ## Setting Up Jenkins GUI
 
+The password for Jenkins is typically not stored in a specific file path like other configurations. Instead, Jenkins manages user authentication using its own user database or an external authentication provider.
 
-      1. Password for Jenkins Stored in this Path : /var/lib/jenkins/secrets/initialAdminPassword
-      ```
-      cat /var/lib/jenkins/secrets/initialAdminPassword
-      ```
-      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/74b16420-2a88-4657-8b31-2f7ab60454c7)
-      2. After entering Password Click on Continue and We dont need any Plugins currently so Cancel it 
-      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b4d8cdbd-c875-46ff-99b3-0e81c7d9baa4)
+However, if you're referring to the Jenkins admin password, which is initially generated during the Jenkins setup wizard, it is usually stored in the Jenkins home directory in a file named `secrets/initialAdminPassword`.
 
-      - We can  See now Jenkins Home Page
-      ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/83703df6-4d65-4a66-b612-8370cd9d5b14)
+```bash
+cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
-5. **Integrate Github with Jenkins**
+After retrieving the initial admin password, you can use it to log in to Jenkins for the first time and set up your admin user Account 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/74b16420-2a88-4657-8b31-2f7ab60454c7)
+     
+ 
+After entering Password Click on Continue and We dont need any Plugins currently so Cancel it 
+      
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b4d8cdbd-c875-46ff-99b3-0e81c7d9baa4)
+
+We can  See now Jenkins Home Page
+      
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/83703df6-4d65-4a66-b612-8370cd9d5b14)
+
+## **Integrate Github with Jenkins**
       1. Install Git on Jenkins Instance
       2. Install Github Plugin on Jenkins GUI
       3. Configure Git on Jenkins GUI
 
-## 1. Install Git on Jenkins Instance
+1. Install Git on Jenkins Instance
    1. Check Git Installed or Not
    ```
    git
