@@ -71,9 +71,19 @@ This should display the version of Java installed on your system, confirming tha
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ec37763-cc76-4a69-b46e-27b8b68d7eb9)
 
-e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a9885cc6-28c2-4d51-affa-f463987f07b2)
+To install Apache Tomcat 8 on your server inside the /opt directory using the tar.gz file from the official Tomcat page, you can follow these steps:
 
-f. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/78493f9d-fb52-40fc-80d2-b81fa1bc495e)
+1. **Download Tomcat:**
+   First, navigate to the official Apache Tomcat website (https://tomcat.apache.org/download-80.cgi) and download the latest version of Tomcat 8 as a tar.gz file. You can use `wget` or `curl` commands to download the file directly to your server.
+
+   ```bash
+   wget https://downloads.apache.org/tomcat/tomcat-8/v8.x.x/bin/apache-tomcat-8.x.x.tar.gz
+   ```
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a9885cc6-28c2-4d51-affa-f463987f07b2)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/78493f9d-fb52-40fc-80d2-b81fa1bc495e)
 
 
 g. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c31f9811-0f05-4175-a960-6446f5a936b3)
