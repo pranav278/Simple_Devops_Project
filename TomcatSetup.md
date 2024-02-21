@@ -1,5 +1,51 @@
-1. Creat New EC2 instance
-a.![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f0c10770-e35d-4406-81c5-d5fbde40f66a)
+## Tomcat Setup on EC2 Amazon Linux Instance 
+
+1. **Sign in to AWS Console:**
+   Go to the AWS Management Console (https://aws.amazon.com/console) and sign in to your AWS account.
+
+2. **Open EC2 Dashboard:**
+   Once logged in, navigate to the EC2 dashboard by clicking on the "Services" dropdown menu at the top-left corner, then selecting "EC2" under the "Compute" section.
+
+3. **Launch Instance:**
+   Click on the "Launch Instance" button to start the process of launching a new EC2 instance.
+
+4. **Choose AMI:**
+   In the "Step 1: Choose an Amazon Machine Image (AMI)" section:
+   - Select "AWS Marketplace" on the left sidebar.
+   - Search for "Amazon Linux 2" in the search bar.
+   - Select the appropriate Amazon Linux 2 AMI from the search results.
+
+5. **Choose Instance Type:**
+   In the "Step 2: Choose an Instance Type" section, select the instance type that meets your requirements. For example, you can choose a t2.micro instance type for a basic setup.
+
+6. **Configure Instance:**
+   Proceed to the Default 
+
+7. **Add Storage:**
+   In the "Step 4: Add Storage" section, you can specify the size of the root volume (usually the default is fine for most cases).
+
+8. **Add Tags (Optional):**
+   In the "Step 5: Add Tags" section, you can add tags to your instance for better organization. Tags are key-value pairs that you can use to categorize your instances.
+
+9. **Configure Security Group:**
+   In the "Step 6: Configure Security Group" section:
+   - Create a new security group by selecting "Create a new security group" option.
+   - Set the security group name and description.
+   - For the inbound rules, add a rule that allows all traffic (source: 0.0.0.0/0, ::/0, or anywhere) for all protocols and all ports.
+   - For the outbound rules, keep the default settings which allow all traffic.
+
+10. **Review Instance Launch:**
+    Review all your configurations in the "Step 7: Review Instance Launch" section. If everything looks good, click on the "Launch" button.
+
+11. **Select Key Pair:**
+    You will be prompted to create a new key pair or select an existing one. Choose "Create a new key pair", enter a name for the key pair, and then click "Download Key Pair". Make sure to store the downloaded private key (.pem file) in a secure location as it will be required to access your instance.
+
+12. **Launch Instances:**
+    After downloading the key pair, click on the "Launch Instances" button. Connect using Mobaxtrame 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f0c10770-e35d-4406-81c5-d5fbde40f66a)
+
+
 b.![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2771b9ab-8eb1-4a4b-b36a-ccb8e3f31cbb)
 
 c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6aac289e-30ad-426f-8a3e-0f59d5d70f60)
