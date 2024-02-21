@@ -1,4 +1,4 @@
-## Deploy Artifact On Tomcat Server ( Use of Bash )
+## Step 7:- Deploy Artifact On Tomcat Server ( Use of Bash )
 
 Open Git Bash on your local machine. You can usually find it in the Start menu on Windows or by searching for "Git Bash".
 
