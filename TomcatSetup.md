@@ -103,11 +103,49 @@ To install Apache Tomcat 8 on your server inside the /opt directory using the ta
    
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/107c63dc-83e9-4b1c-9199-99e32aabcd37)
 
-i. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6198bf50-fc90-43de-a670-dcd39edf5f30)
+1. **Navigate to the Tomcat Installation Directory:**
 
-j. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/407c6efc-9eb6-4190-8711-7dc11f66324f)
+```bash
+cd /opt/tomcat
+```
 
-k. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ff502ed7-3ba4-4e68-9abb-00adfb6fe870)
+This command changes the current directory to the Tomcat installation directory. Replace `/opt/tomcat` with the actual path to your Tomcat installation directory if it's different.
+
+2. **Start Tomcat:**
+
+```bash
+./startup.sh
+```
+
+This command executes the startup script (`startup.sh`) located in the `bin` directory of the Tomcat installation directory. The `./` before `bin/startup.sh` indicates that the script is located in the current directory.
+
+3. **Stop Tomcat:**
+
+```bash
+./shutdown.sh
+```
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6198bf50-fc90-43de-a670-dcd39edf5f30)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/407c6efc-9eb6-4190-8711-7dc11f66324f)
+
+To verify that Tomcat is running and accessible from a web browser, you can follow these steps:
+
+1. **Open a Web Browser:**
+   Open any web browser of your choice on your local machine.
+
+2. **Enter Tomcat URL:**
+   Enter the URL of your Tomcat server in the address bar of the web browser. By default, Tomcat listens on port 8080. If your server's IP address is `your_server_ip`, then the URL would be:
+
+   ```
+   http://your_server_ip:8080
+   ```
+
+   Replace `your_server_ip` with the actual IP address or hostname of your server.
+   
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ff502ed7-3ba4-4e68-9abb-00adfb6fe870)
 
 To check where is out Context.xml file
 
