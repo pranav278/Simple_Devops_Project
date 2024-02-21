@@ -12,6 +12,14 @@ e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c
 
 f. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/122cc2e9-0efe-4fc4-9c5b-ca2807f0cdf3)
 
+FILE UPDATED
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1990f88c-6b29-4b0d-a12b-367c4fa872c8)
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2fbc2fce-49c9-48f7-a49b-7d49a3e4735d)
+
+
+
 
 
 
