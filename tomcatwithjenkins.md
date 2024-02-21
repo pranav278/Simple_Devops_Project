@@ -1,6 +1,7 @@
-## Integrating Apache Tomcat with Jenkins
+## Step 6:- Integrate Apache Tomcat with Jenkins
 
-- Integrating Apache Tomcat with Jenkins allows you to deploy Java web applications directly from Jenkins to Tomcat servers. Here's a basic outline of the integration process:
+
+Integrating Apache Tomcat with Jenkins allows you to deploy Java web applications directly from Jenkins to Tomcat servers. Here's a basic outline of the integration process:
 
 Add the "Deploy to Container Plugin" in Jenkins:
 
