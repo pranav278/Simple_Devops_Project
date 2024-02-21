@@ -1,4 +1,4 @@
-4. **Setting Up Jenkins thing**
+## Setting Up Jenkins GUI
 
 
       1. Password for Jenkins Stored in this Path : /var/lib/jenkins/secrets/initialAdminPassword
