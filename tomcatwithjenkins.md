@@ -28,7 +28,8 @@ l. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2
 
 m. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/82d7ba7a-c18a-4f9e-9308-56c606cec5e1)
 
-Output is Pendng
+n. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/738c777a-3633-483e-9a8a-16708f2fab36)
+
 
 
 
