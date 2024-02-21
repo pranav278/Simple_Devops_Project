@@ -118,19 +118,73 @@ To create your first Maven job in Jenkins for deploying a project, named "Deploy
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f6743744-54a0-4396-bc6c-e2af588b5ba7)
 
-i. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/71a5d067-ea3c-436d-8dcd-164ad8f98884)
+10. **Configure Build Environment:**
+   Scroll down to the "Build" section and click on the "Add build step" dropdown.
 
-j. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d0b4c026-ce1e-43ed-b4c1-02c6e7618af7)
+11. **Set Root POM:**
+   In the "Root POM" field, enter the path to your `pom.xml` file. If your `pom.xml` file is located in the root directory of your project, you can simply enter `pom.xml`.
 
-k. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c5c74416-c8b2-4641-a673-4979783071e9)
+12. **Set Goals and Options:**
+   In the "Goals and options" field, enter the Maven goals and options you want to execute during the build process. For example, you can enter `clean install` to clean the project and then install dependencies and package the project into a JAR or WAR file.
 
-Now Buid it 
+By configuring the build environment with the specified `pom.xml` file and Maven goals and options, Jenkins will execute the Maven build according to your project's requirements. This setup allows for flexibility in configuring the Maven build process within Jenkins.
+   
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/71a5d067-ea3c-436d-8dcd-164ad8f98884)
 
-l. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2c150f51-2252-4359-a9f3-c4f0707d53ea)
+To configure Jenkins to deploy the WAR files to a remote Tomcat server as a post-build action, follow these steps:
 
-m. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/82d7ba7a-c18a-4f9e-9308-56c606cec5e1)
+1. **Access Jenkins Dashboard:**
+   Log in to your Jenkins server and navigate to the Jenkins dashboard.
 
-n. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/738c777a-3633-483e-9a8a-16708f2fab36)
+2. **Select Your Maven Project:**
+   Click on the "Deployment of Job" Maven project you've created to edit its configuration.
+
+3. **Configure Post-Build Actions:**
+   Scroll down to the "Post-build Actions" section.
+
+4. **Add Post-Build Action:**
+   Click on the "Add post-build action" dropdown and select "Deploy war/ear to a container".
+
+5. **Specify WAR File:**
+   - In the "WAR/EAR files" field, enter `**/*.war`. This specifies that Jenkins should deploy all WAR files found in the project workspace.
+
+6. **Set Context Path:**
+   - Leave the "Context path" field blank. This means that Tomcat will use the default context path for the deployed application.
+
+7. **Select Tomcat Container:**
+   - Choose "Tomcat 8.x Remote" from the "Containers" dropdown. This specifies that Jenkins will deploy the WAR files to a remote Tomcat server.
+
+8. **Specify Tomcat Credentials:**
+   - In the "Credentials" dropdown, select the credentials you created earlier for authenticating with the Tomcat server.
+
+9. **Enter Tomcat URL:**
+   - In the "Tomcat URL" field, enter the URL of your Tomcat server where you want to deploy the WAR files (e.g., `http://your_tomcat_server:8080`). Make sure to replace `your_tomcat_server` with the actual hostname or IP address of your Tomcat server.
+
+10. **Save Configuration:**
+    Once you've configured the post-build actions, click on the "Save" or "Apply" button to save the changes.
+
+11. **Run the Job:**
+    You can now run the Maven job by clicking on the "Build Now" button. Jenkins will start the build process and deploy the WAR files to the specified Tomcat server as a post-build action.
+
+By following these steps, Jenkins will automatically deploy the WAR files to the remote Tomcat server after a successful build, streamlining the deployment process for your Maven project.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d0b4c026-ce1e-43ed-b4c1-02c6e7618af7)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c5c74416-c8b2-4641-a673-4979783071e9)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2c150f51-2252-4359-a9f3-c4f0707d53ea)
+
+Once the Jenkins job runs and successfully deploys the WAR file to the Tomcat server, you should be able to see the deployed application listed in the Tomcat Web Application Manager.
+
+To access the Tomcat Web Application Manager:
+
+1. Open a web browser and navigate to the Tomcat Manager URL. This is typically `http://your_tomcat_server:8080/manager/html`.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/82d7ba7a-c18a-4f9e-9308-56c606cec5e1)
+
+* Output :- 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/738c777a-3633-483e-9a8a-16708f2fab36)
 
 
 
