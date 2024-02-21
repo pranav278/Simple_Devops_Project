@@ -1,5 +1,5 @@
 
-## Setup Jenkins on Amazon Linux Server
+## Step 1:- Launch Amazon Linux 2 Instance and Connect using Mobaxtrame
 
 1. **Launch an Amazon Linux 2 Instance**:
    - Log in to the AWS Management Console.
