@@ -1,4 +1,4 @@
-## 6. **Integrate Maven with Jenkins*
+##  Integrate Maven with Jenkins
 
 
       1. Setup Maven on Jenkins Server
