@@ -6,30 +6,65 @@
       3. Install Maven Plugin
       4. Configure Maven And Java
 
-A. Setup MAVEN
-1. Install maven using tar file
-Go to the link Copy the tar file  : https://maven.apache.org/download.cgi
+
+To navigate to the `/opt` directory and then install Maven from a tar.gz archive, follow these steps:
+
+1. **Navigate to the `/opt` Directory:**
+   Open a terminal and use the `cd` command to navigate to the `/opt` directory:
+
+   ```bash
+   cd /opt
+   ```
+
+2. **Download Maven:**
+   You can download the latest version of Maven directly to the `/opt` directory using `wget` or `curl`. For example, using `wget`:
+
+   ```bash
+   wget https://downloads.apache.org/maven/maven-3.x.x/binaries/apache-maven-3.x.x-bin.tar.gz
+   ```
+
+   Replace `3.x.x` with the latest version number available.
+
+3. **Extract the Archive:**
+   Once the download is complete, extract the Maven archive using the `tar` command:
+
+   ```bash
+   tar -xvzf apache-maven-3.x.x-bin.tar.gz
+   ```
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f5d06644-ee14-4f6f-a13d-cdcae0424096)
 
-2. Extract this file
-```
-tar -xvzf pkgname
-```
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9e9899a0-e839-452b-b0f9-fbb50acbe4c2)
 
-3. Moved that file to the maven dir
+* Moved that file to the maven dir
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/853b0024-ca7f-4c32-b70f-50afd5a0158e)
 
-4. Because of this we need to set enviroment variable
+* If the `mvn` command is not found, it indicates that Maven's bin directory is not included in the system's PATH environment variable. To fix this issue, you need to ensure that the PATH environment variable includes the bin directory of the Maven installation.
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7badc669-6ac5-4de8-83c2-21fae03e49cb)
 
-5. For Setting up ENV variable we need bash_Profile file
+If you're using Bash as your shell, you can set environment variables in the ~/.bash_profile file. This file is executed for login shells, and it's a common place to set environment variables on Unix-like systems
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d13ac34b-bff4-4a61-b3ee-27f3c977ddd6)
 
-6. Modify with 
+* **Set M2_HOME, M2, and JAVA_HOME:**
+   Add the following lines to set the environment variables:
+
+   ```bash
+   export M2_HOME=/opt/maven
+   export M2=$M2_HOME/bin
+   export JAVA_HOME=/path/to/java
+   ```
+
+   Replace `/opt/maven` with the actual path to your Maven installation directory and `/path/to/java` with the actual path to your Java installation directory.
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/16569790-6d2f-4668-88b1-914c1e0c99bb)
 
-7. How to find JAVA path
+* To find the Java path on your system, you can use the `find` command to search for the directory containing `jvm` executable. Here's how you can do it:
+
+```bash
+sudo find /  -name jvm
+```
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/87546095-e8f7-4865-8932-671fa652ceb2)
 
 8. Check the Changes are Affected or not
