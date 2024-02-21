@@ -147,25 +147,51 @@ To verify that Tomcat is running and accessible from a web browser, you can foll
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ff502ed7-3ba4-4e68-9abb-00adfb6fe870)
 
-To check where is out Context.xml file
+The `context.xml` file in Apache Tomcat typically resides within the configuration directory of a specific web application. This file allows you to define settings and resources for a web application, such as data sources, security constraints, and environment entries
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/92a062fd-2554-4b00-9653-a45b7ea55038)
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6068b8fb-8937-443e-9470-6c499bcc2227)
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c5fc893e-05c0-40b9-a272-b6994442b422)
-4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/51fbd8bb-4322-48a6-9d33-574b0899e104)
+You can use the `find` command to search for the `context.xml` file within the Tomcat directory structure. Here's how you can do it:
+
+```bash
+find / -name "context.xml"
+```
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/92a062fd-2554-4b00-9653-a45b7ea55038)
+
+Modify the Below changes using Vi Editor 
+
+*RemoteAddrValve Configuration** (`server.xml`):
+   ```xml
+   <!--
+   <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+          allow="127\.\d+\.\d+\.\d+|::10:0:0:0:0:0:0:1" />
+   -->
+   ```
+   This snippet configures the `RemoteAddrValve`, which is a Valve responsible for filtering requests based on the remote IP address. In this configuration:
+   - `className`: Specifies the class responsible for filtering requests based on remote IP addresses.
+   - `allow`: Specifies a regular expression pattern for IP addresses to allow. In this case, it allows requests from `127.x.x.x` and `::10:0:0:0:0:0:0:1`, which are typically localhost addresses.
+
+* So far accessing command out these things
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6068b8fb-8937-443e-9470-6c499bcc2227)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c5fc893e-05c0-40b9-a272-b6994442b422)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/51fbd8bb-4322-48a6-9d33-574b0899e104)
 
 
-5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f2c97861-5a60-40ad-b6aa-d3c2277a538f)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f2c97861-5a60-40ad-b6aa-d3c2277a538f)
 
-After Modificaion need to restart tomcat
+* After Modificaion need to restart tomcat service 
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d81699d8-8228-498a-8dd9-e7c73dbfb080)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d81699d8-8228-498a-8dd9-e7c73dbfb080)
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1d100b0-d713-4650-aa15-76ae7c9b3186)
+* Now verify Tomcat ask for user Credentials 
 
-Add cred on user.xml
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1d100b0-d713-4650-aa15-76ae7c9b3186)
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b11e11fc-88e6-4eaf-b9ff-b309539de2d0)
+The `tomcat-users.xml` file in Apache Tomcat is used to configure users and roles for accessing the Tomcat Manager and Host Manager web applications. This file defines usernames, passwords, and associated roles that control access to these applications.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b11e11fc-88e6-4eaf-b9ff-b309539de2d0)
 
 Update users information in the tomcat-users.xml file goto tomcat home directory and Add below users to conf/tomcat-users.xml file
 ```
@@ -177,22 +203,49 @@ Update users information in the tomcat-users.xml file goto tomcat home directory
  <user username="deployer" password="deployer" roles="manager-script"/>
  <user username="tomcat" password="s3cret" roles="manager-gui"/>
 ```
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6189bc96-1ac0-4d40-aa52-f00cf15ae54e)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2084b072-f396-4fc3-b28d-61d79047bce4)
+These lines define three users:
 
-create link files for tomcat startup.sh and shutdown.sh
+- `admin`: Has access to all roles defined (`manager-gui`, `manager-script`, `manager-jmx`, `manager-status`), typically used for administrative purposes.
+- `deployer`: Has access only to the `manager-script` role, typically used for deploying applications via scripts.
+- `tomcat`: Has access only to the `manager-gui` role, typically used for accessing the HTML interface of the Tomcat Manager application.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6189bc96-1ac0-4d40-aa52-f00cf15ae54e)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2084b072-f396-4fc3-b28d-61d79047bce4)
+
+This configuration allows different users to have different levels of access to the Tomcat Manager and related interfaces, depending on their roles.
+
+
+To simplify the process of starting and stopping Tomcat by creating symbolic links for the `startup.sh` and `shutdown.sh` scripts, you can follow these steps:
+
+1. **Navigate to the Directory Where You Want to Create the Links:**
+   Choose a directory where you want to create the symbolic links. For example, you might choose a directory that's already in your system's `PATH` environment variable so you can execute the commands from anywhere.
+
+   ```bash
+   cd /usr/local/bin
+   ```
+
+   Replace `/usr/local/bin` with the directory of your choice.
+
+2. **Create Symbolic Links:**
+   
+
+   This creates symbolic links named `tomcat-start` and `tomcat-stop` in the current directory that point to the respective scripts in the Tomcat installation directory.
 ```
 
 ln -s /opt/apache-tomcat-<version>/bin/startup.sh /usr/local/bin/tomcatup
 ln -s /opt/apache-tomcat-<version>/bin/shutdown.sh /usr/local/bin/tomcatdown
 ```
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/361d91ec-df00-4a4b-b4f4-74c5d38098f2)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/361d91ec-df00-4a4b-b4f4-74c5d38098f2)
 
-e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/119c8da3-f8d1-495f-b9c6-c5c0a28c0b61)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/119c8da3-f8d1-495f-b9c6-c5c0a28c0b61)
 
-f. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65f9558c-3375-4fd5-bd86-2ec69270ae77)
+* Tomcat is working by Using Symbolic link also
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65f9558c-3375-4fd5-bd86-2ec69270ae77)
 
 
 
