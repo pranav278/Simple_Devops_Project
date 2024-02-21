@@ -1,4 +1,4 @@
-## Setting Up Jenkins GUI
+## Step 3:- Setting Up Jenkins GUI
 
 The password for Jenkins is typically not stored in a specific file path like other configurations. Instead, Jenkins manages user authentication using its own user database or an external authentication provider.
 
