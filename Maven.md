@@ -86,11 +86,38 @@ source .bash_profile
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9a5d972c-e1a4-4918-8d39-6037c1d463d5)
 
-## Add MAVEN Plugin on Jenkins GUI
+To add the Maven Integration Plugin and configure Java and Maven tools in Jenkins, you can follow these steps:
 
-1. Add MAVEN integration Plugin 
+1. **Add Maven Integration Plugin:**
+   - Navigate to your Jenkins dashboard.
+   - Click on "Manage Jenkins" in the left sidebar.
+   - Select "Manage Plugins" from the dropdown menu.
+   - Go to the "Available" tab.
+   - Use the search box to search for "Maven Integration".
+   - Check the checkbox next to "Maven Integration" plugin.
+   - Click on the "Install without restart" button.
+
+2. **Configure Java and Maven Tools:**
+   - After installing the Maven Integration Plugin, go back to the "Manage Jenkins" page.
+   - Select "Global Tool Configuration" from the list.
+   - Scroll down to the "JDK installations" section.
+   - Click on "Add JDK" to add a new JDK installation.
+   - Enter the following details:
+     - Name: Java11
+     - JAVA_HOME: Provide the path to your JDK installation directory for Java 11.
+   - Click on "Save" to save the configuration.
+
+   - Scroll down to the "Maven installations" section.
+   - Click on "Add Maven" to add a new Maven installation.
+   - Enter the following details:
+     - Name: Maven3
+     - MAVEN_HOME: `/opt/maven` (or the path to your Maven installation directory).
+   - Click on "Save" to save the configuration.
+
+Now, Jenkins is configured with the Maven Integration Plugin, and Java and Maven tools are set up. You can use these tools in your Jenkins jobs to build and test Maven projects.
+ 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4fa2ebd8-203d-4294-bc95-32d72d3c85e7)
-2. Add tools configuration for JAVA and Maven
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2b4bbba2-6b43-46a9-88bd-4619dfd8e46f)
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f5fcabb4-89a6-4a9d-a52e-a90fb53950c6)
