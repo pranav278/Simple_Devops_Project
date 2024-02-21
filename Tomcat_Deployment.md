@@ -50,6 +50,10 @@ Once Login you will see this console
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/936e1c03-8f4f-45da-9093-976ff9078f3b)
 
 ---
+
+
+
+
 ---
 
 ## Step 2:- Installation of Jenkins on Our Linux Server
