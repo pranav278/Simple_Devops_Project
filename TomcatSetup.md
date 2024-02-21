@@ -67,9 +67,9 @@ This should display the version of Java installed on your system, confirming tha
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2771b9ab-8eb1-4a4b-b36a-ccb8e3f31cbb)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6aac289e-30ad-426f-8a3e-0f59d5d70f60)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6aac289e-30ad-426f-8a3e-0f59d5d70f60)
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ec37763-cc76-4a69-b46e-27b8b68d7eb9)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ec37763-cc76-4a69-b46e-27b8b68d7eb9)
 
 e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a9885cc6-28c2-4d51-affa-f463987f07b2)
 
