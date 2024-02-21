@@ -45,8 +45,27 @@
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f0c10770-e35d-4406-81c5-d5fbde40f66a)
 
+To install Java 11 on an Amazon Linux AMI 2 instance, you can use the `amazon-linux-extras` command. Here's the command you can run after switching to the root user:
 
-b.![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2771b9ab-8eb1-4a4b-b36a-ccb8e3f31cbb)
+```bash
+amazon-linux-extras install java-openjdk11
+```
+
+Here's what each part of the command does:
+
+- `amazon-linux-extras`: This is a command-line tool provided by Amazon Linux that allows you to enable, disable, and install additional software repositories (known as "extras").
+- `install`: This subcommand is used to install the specified extra.
+- `java-openjdk11`: This is the name of the extra package that provides OpenJDK 11, which is Java 11.
+
+After running this command, Java 11 will be installed on your Amazon Linux AMI 2 instance, and you can verify the installation by running:
+
+```bash
+java -version
+```
+
+This should display the version of Java installed on your system, confirming that Java 11 is now available.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2771b9ab-8eb1-4a4b-b36a-ccb8e3f31cbb)
 
 c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6aac289e-30ad-426f-8a3e-0f59d5d70f60)
 
