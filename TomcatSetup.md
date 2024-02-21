@@ -1,4 +1,4 @@
-## Tomcat Installation & Setup on EC2 Amazon Linux Instance 
+## Step 5:- Tomcat Installation & Setup on EC2 Amazon Linux Instance
 
 1. **Sign in to AWS Console:**
    Go to the AWS Management Console (https://aws.amazon.com/console) and sign in to your AWS account.
