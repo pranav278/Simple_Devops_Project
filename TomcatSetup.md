@@ -85,10 +85,23 @@ To install Apache Tomcat 8 on your server inside the /opt directory using the ta
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/78493f9d-fb52-40fc-80d2-b81fa1bc495e)
 
+2. **Extract Tarball:**
+   Once the download is complete, extract the tar.gz file to the desired installation directory.
 
-g. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c31f9811-0f05-4175-a960-6446f5a936b3)
+   ```bash
+   tar -xzvf apache-tomcat-8.x.x.tar.gz 
+   ```
 
-h. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/107c63dc-83e9-4b1c-9199-99e32aabcd37)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c31f9811-0f05-4175-a960-6446f5a936b3)
+
+3. **Rename Directory (Optional):**
+   If you want, you can rename the extracted directory for convenience.
+
+   ```bash
+   mv /opt/apache-tomcat-8.x.x  tomcat
+   ```
+   
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/107c63dc-83e9-4b1c-9199-99e32aabcd37)
 
 i. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6198bf50-fc90-43de-a670-dcd39edf5f30)
 
