@@ -827,11 +827,11 @@ You should be able to clone a project, make changes, and push those changes to a
    cd <cloned_project_directory>
    ```
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/00b147f6-9970-47c8-9647-7effeb7b1af3)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/00b147f6-9970-47c8-9647-7effeb7b1af3)
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/501d96ba-37e6-4cc0-bb42-61e76d205551)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/501d96ba-37e6-4cc0-bb42-61e76d205551)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1cce9758-b6d0-4d4c-9f01-ea05a0c853c1)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1cce9758-b6d0-4d4c-9f01-ea05a0c853c1)
 
 4. Use the `cd` command to change directory to the `webapps` directory. If you're unsure of the exact path, you can use the `find` command to locate it. Assuming Tomcat is installed in the default location on Linux, you might run:
 
@@ -848,9 +848,9 @@ c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1
    ```
 
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0335bc09-da09-4a45-a65e-9df873520fcd)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0335bc09-da09-4a45-a65e-9df873520fcd)
 
-e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c07c83fe-2513-432f-b8f8-4d72765a1f4b)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c07c83fe-2513-432f-b8f8-4d72765a1f4b)
 
 If you've made changes to files in your project directory and you want to check the status of these changes using Git, you can use the `git status` command. Here's how you can do it:
 
