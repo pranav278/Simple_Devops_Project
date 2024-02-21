@@ -1,4 +1,4 @@
-## **Installation of Jenkins on Our Linux Server**
+## Step 2:- Installation of Jenkins on Our Linux Server
    
 1. To switch to the root user, you can use the 'sudo su -' command. This command essentially elevates your privileges to root, allowing you to execute commands as the root user.
 
