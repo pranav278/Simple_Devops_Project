@@ -67,20 +67,26 @@ sudo find /  -name jvm
 ```
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/87546095-e8f7-4865-8932-671fa652ceb2)
 
-8. Check the Changes are Affected or not
+* Check the Changes are Affected or not
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f9fb65b5-6ad4-4fb9-b828-2126cce48e35)
 
-9. Reload the file once
+* After making changes to your `.bash_profile` or `.bashrc` file, you need to reload it to apply the changes. You can do this using the `source` command. Here's how:
+
+```bash
+source ~/.bash_profile
+```
+
+
 ```
 source .bash_profile
 ```
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bb124730-4675-49ea-a847-3ea9c7cc54b3)
 
-10. Now MVN execute from Anywhere
+* Now MVN execute from Anywhere
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9a5d972c-e1a4-4918-8d39-6037c1d463d5)
 
-B. Add MAVEN Plugin on Jenkins GUI
+## Add MAVEN Plugin on Jenkins GUI
 
 1. Add MAVEN integration Plugin 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4fa2ebd8-203d-4294-bc95-32d72d3c85e7)
