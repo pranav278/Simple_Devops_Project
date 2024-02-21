@@ -39,15 +39,41 @@ We can  See now Jenkins Home Page
    ```
    ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d4a05786-a863-4bb2-914d-882027bfba55)
 
-## 2. Install Github Plugin on Jenkins GUI
-   1. Go to the Highlighted Path to Add Pluging
-   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0018a7e7-56dd-455d-8a0b-15797eee0474)
-      
-   Click on Install without Restart
-   2. Add the Git Installation Configuration 
-   ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5f62e98a-47ed-47a8-b022-032ea27502e0)
+## Install Github Plugin on Jenkins GUI
 
-   Click on Apply and SAVE
+To install the GitHub Plugin and configure Git installation in Jenkins, follow these steps:
+
+### Install GitHub Plugin:
+
+1. Navigate to your Jenkins dashboard.
+2. Click on "Manage Jenkins" in the left sidebar.
+3. Select "Manage Plugins" from the dropdown menu.
+4. Go to the "Available" tab.
+5. Use the search box to search for "GitHub".
+6. Check the checkbox next to "GitHub Plugin".
+7. Click on the "Install without restart" button.
+
+### Add Git Installation Configuration:
+
+1. After installing the GitHub Plugin, go back to the "Manage Jenkins" page.
+2. Select "Global Tool Configuration" from the list.
+3. Scroll down to the "Git installations" section.
+4. Click on "Add Git" to add a new Git installation.
+5. Enter the following details:
+   - **Name:** git
+   - **Path to Git executable:** Enter the path to the Git executable. If Git is installed globally, you can usually leave this field empty as Jenkins will search for Git in the system's PATH.
+6. Click on "Save" to save the configuration.
+
+Now, Jenkins is configured with the GitHub Plugin and Git installation. You can use Git in your Jenkins jobs for version control and integrate with GitHub repositories.
+  
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0018a7e7-56dd-455d-8a0b-15797eee0474)
+      
+Click on Install without Restart
+   
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5f62e98a-47ed-47a8-b022-032ea27502e0)
+
+
+Click on Apply and SAVE
 
 
 
