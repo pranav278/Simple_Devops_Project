@@ -58,6 +58,72 @@ Fixing Tomcat Container Issue
 
    This changes done is Temporary so we creat docker file
 
+   lets understand how can we do through dockerfile
+
+   1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5143b378-e177-4f27-8608-20628aa00363)
+
+   2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/17bd7f75-ba09-4c1c-99b5-0abab93da251)
+  
+   3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/59e213a7-bbb4-44d2-be57-4a20b3926c46)
+  
+   4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e57a0500-c81b-476e-b7eb-c3661a3395c7)
+  
+   5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/caac184b-5557-42fa-aa2d-8774c21933c5)
+  
+   integrate docker with jenkins
+
+   a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fce35dad-8ff1-42ee-9482-76e77cf3113e)
+
+   b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5eeae8b1-a8a6-4dc7-ad69-150fe121c624)
+
+   c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4a201549-eec3-47e7-b5f8-e7cf1df1833c)
+
+   dockruser error
+
+   1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/63cccc92-bd3b-4984-91a8-e4e2c49e5879)
+  
+   2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/02eeae5e-ee2b-4644-aa99-cc38c40e368e)
+
+  
+   3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c70e5680-ab96-425d-83a1-c0ea2da9374f)
+  
+   4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/27d300bc-c27d-4c95-88c4-3cce1786af04)
+  
+   5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/85dd34a6-8d8d-4438-8103-4a13478e05c3)
+  
+   6. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/91ddb02d-e7b3-4076-bfe2-5364e1750bb7)
+
+
+   Login to Jenkins
+
+   a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/587774b6-69c6-48ef-998e-3779ee18a78f)
+
+   Private ip
+
+   b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/29a18eb9-ecb6-418b-b632-6fdee0708e64)
+
+   c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/213eed6d-26c8-4bca-a25d-23c10d6318d0)
+
+   d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1db80f52-03d6-4263-8cb3-01482a58b62b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
