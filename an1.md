@@ -9,13 +9,62 @@
 
 
 
-1. Creat EC2 instance and Connect with mobaxtrame
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a7e3b4c6-f242-4a16-95c8-3c67d082d418)
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6b857048-68d3-45bc-a0af-f31290ce3a67)
+1. **Launch EC2 Instance**:
+   - Go to the AWS Management Console and navigate to the EC2 dashboard.
+   - Click on "Launch Instance" and choose the "Amazon Linux 2 AMI" as the image.
+   - Select an instance type, configure instance details, add storage, and configure any additional settings as needed.
+   - At the "Configure Security Group" step, create a new security group or use an existing one. Allow all traffic (All traffic, all protocols, all ports, source `0.0.0.0/0` ::/0) for simplicity, but it's recommended to restrict access based on your specific needs.
+   - Review and launch the instance. When prompted, create a new key pair or use an existing one. Download the private key file (`.pem`).
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e5058350-4280-4505-b0ef-2c30c13d616d)
+2. **Connect using MobaXterm**:
+   - Open MobaXterm.
+   - Go to "Session" and click on "SSH".
+   - In the "Remote host" field, enter the public IP address or DNS of your EC2 instance.
+   - In the "Advanced SSH settings" section, click on the "Use private key" checkbox and browse to select the private key file (`.pem`) you downloaded during instance creation.
+   - Click "OK" to connect.
+
+3. **Configure SSH Key Permissions**:
+   - Before connecting, ensure that the permissions on your private key file are secure. In Unix/Linux systems, you typically do this with the `chmod` command:
+     ```
+     chmod 400 /path/to/your/private-key.pem
+     ```
+
+4. **Connect to the Instance**:
+   - Once you've configured the session in MobaXterm, double-click on it to initiate the SSH connection to your EC2 instance.
+   - If everything is set up correctly, you should be connected to your EC2 instance via SSH.
+
+5. **Further Configuration**:
+   - Once connected, you can proceed with any further configurations you need on your EC2 instance, such as installing Ansible, setting up your playbooks, etc.
+
+That's it! You should now have your EC2 instance set up with the specified configuration and connected to it using MobaXterm.
+
+
+
+To change the hostname of your EC2 instance to "ansible-server", you can follow these steps after connecting to the instance via SSH:
+
+1. **Edit the Hostname File**:
+   - Use a text editor like `vi` or `nano` to edit the `/etc/hostname` file:
+     ```
+     sudo nano /etc/hostname
+     ```
+
+2. **Change the Hostname**:
+   - Replace the existing hostname with the new hostname "ansible-server".
+  
+
+3. **Restart the Server**:
+   - Simply execute the following command to initiate a system restart:
+     ```
+      init 6
+     ```
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a7e3b4c6-f242-4a16-95c8-3c67d082d418)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6b857048-68d3-45bc-a0af-f31290ce3a67)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e5058350-4280-4505-b0ef-2c30c13d616d)
 
 d. Change the hostname 
 
