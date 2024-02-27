@@ -146,12 +146,15 @@ init 6
 
 This command will initiate the system shutdown and reboot.
 
+To pull the official Tomcat Docker image from Docker Hub, you can use the following command:
 
-e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/cbb31d60-442c-42c5-b8f9-97efb26137d0)
+```bash
+docker pull tomcat
+```
 
-f. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ee75ae45-5648-4ea2-9985-51c995c5ec93)
+This command will pull the latest version of the Tomcat image by default. If you want to pull a specific version, you can specify it using a tag.
 
-Now Pulling
+
 
 1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5bc6051a-4aba-488f-98a6-0da78484c24a)
 
