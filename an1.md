@@ -152,7 +152,23 @@ Now login to the terminal as the ansadmin user
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/507b6387-a02e-4363-9234-eb9ef080e8ed)
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e542fc87-452e-4ddc-b4f0-945efc4f6b2d)
+1. Once logged in, you can generate an SSH key pair by running the `ssh-keygen` command:
+
+```bash
+ssh-keygen
+```
+
+3. You will be prompted to specify the location to save the key pair. Press Enter to save the keys in the default location (`/home/ansadmin/.ssh/id_rsa`).
+
+4. You can optionally enter a passphrase for added security, or leave it empty for no passphrase. Press Enter to continue.
+
+5. The `ssh-keygen` command will generate a public/private key pair and display a message confirming the generation of the keys.
+
+6. Your public key will be stored in `/home/ansadmin/.ssh/id_rsa.pub`, and your private key will be stored in `/home/ansadmin/.ssh/id_rsa`.
+
+7. You can now use this SSH key pair to authenticate with other servers or services.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e542fc87-452e-4ddc-b4f0-945efc4f6b2d)
 
 c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/60f93ee3-8193-4839-bec0-5e579edbbb06)
 
