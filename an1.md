@@ -1,4 +1,5 @@
 ## Ansible Installation 
+```
 1. Setup EC2 instance
 2. Setup Hostname
 3. create anadmin user
@@ -7,6 +8,7 @@
 6. Enable password based login
 7. install ansible
 
+```
 
 
 
@@ -42,6 +44,13 @@ That's it! You should now have your EC2 instance set up with the specified confi
 
 
 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a7e3b4c6-f242-4a16-95c8-3c67d082d418)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6b857048-68d3-45bc-a0af-f31290ce3a67)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e5058350-4280-4505-b0ef-2c30c13d616d)
+
 To change the hostname of your EC2 instance to "ansible-server", you can follow these steps after connecting to the instance via SSH:
 
 1. **Edit the Hostname File**:
@@ -59,14 +68,7 @@ To change the hostname of your EC2 instance to "ansible-server", you can follow 
      ```
       init 6
      ```
-
-![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a7e3b4c6-f242-4a16-95c8-3c67d082d418)
-
-![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6b857048-68d3-45bc-a0af-f31290ce3a67)
-
-![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e5058350-4280-4505-b0ef-2c30c13d616d)
-
-d. Change the hostname 
+     
 
 e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/abf98d3b-e9fa-41bf-987b-87b3765793e5)
 
