@@ -138,7 +138,14 @@ After connecting to your EC2 instance using SSH through MobaXterm, you can run t
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/54539055-6047-443a-8d96-9723151d5633)
 
-d. init 6
+If your system is using SysV init and you wish to reboot the system using `init 6`, you would typically execute it with superuser privileges:
+
+```bash
+init 6
+```
+
+This command will initiate the system shutdown and reboot.
+
 
 e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/cbb31d60-442c-42c5-b8f9-97efb26137d0)
 
