@@ -1,8 +1,42 @@
 
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e3157e56-610d-4112-ab02-1228185bb082)
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/81987bf1-309a-4486-91fb-18460f55c649)
+1. **Login to AWS Console**: Go to the AWS Management Console and login to your AWS account.
+
+2. **Navigate to EC2 Dashboard**: Go to the EC2 dashboard by selecting "Services" from the top navigation bar, then clicking on "EC2" under the Compute section.
+
+3. **Launch Instance**:
+   - Click on the "Launch Instance" button.
+   
+4. **Choose AMI**:
+   - Select "Amazon Linux 2 AMI" from the list of available AMIs.
+
+5. **Choose Instance Type**:
+   - Select an instance type based on your requirements. For example, you can choose t2.micro, which falls under the Free Tier.
+
+6. **Configure Instance Details**:
+   - Leave the default settings or configure as per your requirements.
+
+7. **Add Storage**:
+   - Configure the storage as per your requirements.
+
+8. **Add Tags**:
+   - Optionally, you can add tags to your instance for better organization.
+
+9. **Configure Security Group**:
+   - Create a new security group or select an existing one. Ensure that you allow all traffic (0.0.0.0/0) for all ports for simplicity, but for production systems, you should restrict access based on your needs.
+
+10. **Review Instance Launch**:
+    - Review the configuration to ensure everything is set up correctly.
+
+11. **Generate Key Pair**:
+    - In the "Key Pair" section, select "Create a new key pair" from the drop-down menu.
+    - Enter a name for your key pair, for example, "docker-server-key-pair".
+    - Click on "Download Key Pair" to save the .pem file to your local machine.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e3157e56-610d-4112-ab02-1228185bb082)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/81987bf1-309a-4486-91fb-18460f55c649)
 
 c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/14973698-bd2d-4035-8a03-aa69bfeddd40)
 
