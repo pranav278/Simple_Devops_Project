@@ -92,10 +92,24 @@ After connecting to your EC2 instance using SSH through MobaXterm, you can run t
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4110288d-bb31-4ef6-9543-2c8ad1ad62e3)
 
-Docker Service
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d4777de-9997-4d7e-b27f-56ff5154c696)
+1. **Check Docker service status**:
+    ```bash
+    systemctl status docker
+    ```
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bdbd1623-55c5-4699-af7a-4968e9e757e7)
+   This command will show you the current status of the Docker service.
+
+2. **Start Docker service**:
+    ```bash
+    systemctl start docker
+    ```
+
+   This command will start the Docker service.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d4777de-9997-4d7e-b27f-56ff5154c696)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bdbd1623-55c5-4699-af7a-4968e9e757e7)
 
 Tomcat Container
 
