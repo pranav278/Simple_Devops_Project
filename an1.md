@@ -137,7 +137,16 @@ To enable password authentication in the `sshd_config` file, follow these steps:
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d851097-f4a9-43bc-9d04-bd6e488750dc)
 
-5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ac8ccc8-b6e5-42b6-acea-f73033727a92)
+
+If you're using a system with SysVinit, the command `service sshd reload` would reload the SSH service configuration without interrupting existing SSH sessions. 
+
+```bash
+service sshd reload
+```
+
+This command will reload the SSH service configuration without terminating active SSH sessions. Any changes made to the SSH server configuration files, such as `sshd_config`, will take effect after running this command.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ac8ccc8-b6e5-42b6-acea-f73033727a92)
 
 Login to User Terminal
 
