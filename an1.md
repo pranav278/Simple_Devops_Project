@@ -68,9 +68,29 @@ To change the hostname of your EC2 instance to "ansible-server", you can follow 
      ```
       init 6
      ```
-     
 
-e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/abf98d3b-e9fa-41bf-987b-87b3765793e5)
+ To give `sudo` privileges to a user, create a new user named `ansadmin`, and generate a password for it, follow these steps:
+
+1. **Switch to Root User**:
+   - If you're not already the root user, switch to root using:
+     ```
+     sudo su -
+     ```
+
+2. **Create the User**:
+   - Use the `adduser` command to create the `ansadmin` user:
+     ```
+     adduser ansadmin
+     ```
+
+3. **Set Password for the User**:
+   - After creating the user, set a password for the `ansadmin` user:
+     ```
+     passwd ansadmin
+     ```
+   You will be prompted to enter and confirm the password for the user.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/abf98d3b-e9fa-41bf-987b-87b3765793e5)
 
 
 add this user to visudo
