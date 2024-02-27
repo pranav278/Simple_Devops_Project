@@ -66,9 +66,31 @@ Ensure that your EC2 instance is up and running and that your security group all
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/14973698-bd2d-4035-8a03-aa69bfeddd40)
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1b546968-98cc-4293-84e6-356ae56c6e9e)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1b546968-98cc-4293-84e6-356ae56c6e9e)
 
-e. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4110288d-bb31-4ef6-9543-2c8ad1ad62e3)
+
+After connecting to your EC2 instance using SSH through MobaXterm, you can run the following commands to switch to the root user with sudo privileges and install Docker:
+
+1. **Switch to root user with sudo**:
+    ```bash
+    sudo su -
+    ```
+
+   This command will prompt you for the password of the user you're connecting with. Enter the password and press Enter.
+
+2. **Update the package index**:
+    ```bash
+    yum update
+    ```
+
+3. **Install Docker**:
+    ```bash
+    yum install docker
+    ```
+
+   This command installs Docker on your Amazon Linux 2 instance.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4110288d-bb31-4ef6-9543-2c8ad1ad62e3)
 
 Docker Service
 1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d4777de-9997-4d7e-b27f-56ff5154c696)
