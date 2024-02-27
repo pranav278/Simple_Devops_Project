@@ -94,14 +94,14 @@ After connecting to your EC2 instance using SSH through MobaXterm, you can run t
 
 1. **Check Docker service status**:
     ```bash
-    systemctl status docker
+    service docker status
     ```
 
    This command will show you the current status of the Docker service.
 
 2. **Start Docker service**:
     ```bash
-    systemctl start docker
+    service docker start 
     ```
 
    This command will start the Docker service.
