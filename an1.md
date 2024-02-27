@@ -93,15 +93,51 @@ To change the hostname of your EC2 instance to "ansible-server", you can follow 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/abf98d3b-e9fa-41bf-987b-87b3765793e5)
 
 
-add this user to visudo
+To add the `ansadmin` user to the `sudoers` file using `visudo`, which is the recommended way to edit the sudoers file, follow these steps:
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2e2c9342-71c6-47cb-a56c-0dd97b91deec)
+1. **Open sudoers File for Editing**:
+   - As root, open the sudoers file using `visudo`:
+     ```
+     sudo visudo
+     ```
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/17fd2def-4865-47c3-9694-32a03f717e23)
+2. **Navigate to the sudoers Configuration**:
+   - Use the arrow keys to navigate to the appropriate section in the sudoers file.
 
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d851097-f4a9-43bc-9d04-bd6e488750dc)
+3. **Add User to sudoers**:
+   - Add the following line to grant `sudo` privileges to the `ansadmin` user:
+     ```
+     ansadmin ALL=(ALL) ALL
+     ```
 
-4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ac8ccc8-b6e5-42b6-acea-f73033727a92)
+   This line allows the user `ansadmin` to run any command as any user using `sudo`.
+
+4. **Save and Exit**:
+   - After making the necessary changes, save and exit the editor. In `vi` (the default editor for `visudo`), you can do this by pressing `Esc` to exit editing mode, then typing `:wq` to save and quit.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2e2c9342-71c6-47cb-a56c-0dd97b91deec)
+
+
+To enable password authentication in the `sshd_config` file, follow these steps:
+
+1. **Open `sshd_config` for Editing**:
+   - You can use a text editor like `nano` or `vi` to open the `sshd_config` file. Here's how to do it with `nano`:
+     ```
+     sudo nano /etc/ssh/sshd_config
+     ```
+
+2. **Find the Password Authentication Setting**:
+   - In the `sshd_config` file, look for the line that begins with `PasswordAuthentication`. By default, it is usually set to `no`.
+   - If you can't find the line, you can add it manually.
+
+3. **Modify the Password Authentication Setting**:
+   - Change `PasswordAuthentication no` to `PasswordAuthentication yes`.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/17fd2def-4865-47c3-9694-32a03f717e23)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d851097-f4a9-43bc-9d04-bd6e488750dc)
+
+5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ac8ccc8-b6e5-42b6-acea-f73033727a92)
 
 Login to User Terminal
 
