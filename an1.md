@@ -170,11 +170,29 @@ ssh-keygen
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e542fc87-452e-4ddc-b4f0-945efc4f6b2d)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/60f93ee3-8193-4839-bec0-5e579edbbb06)
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bc52dbd8-9813-4044-884e-a6647232dd40)
+1. **Install Ansible**:
+   Amazon Linux 2 offers Ansible as an extra package, which can be installed using `amazon-linux-extras`:
+   ```bash
+   sudo amazon-linux-extras install ansible2
+   ```
 
-integrate docker with ansible
+   This command installs Ansible version 2.x on your system.
+
+2. **Verify Installation**:
+   After installation, you can verify the Ansible version to ensure it was installed correctly:
+   ```bash
+   ansible --version
+   ```
+
+   This command will display the installed version of Ansible.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/60f93ee3-8193-4839-bec0-5e579edbbb06)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bc52dbd8-9813-4044-884e-a6647232dd40)
+
+
+## integrate docker with ansible
 
 
 
