@@ -148,9 +148,9 @@ This command will reload the SSH service configuration without terminating activ
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5ac8ccc8-b6e5-42b6-acea-f73033727a92)
 
-Login to User Terminal
+Now login to the terminal as the ansadmin user
 
-A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/507b6387-a02e-4363-9234-eb9ef080e8ed)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/507b6387-a02e-4363-9234-eb9ef080e8ed)
 
 b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e542fc87-452e-4ddc-b4f0-945efc4f6b2d)
 
