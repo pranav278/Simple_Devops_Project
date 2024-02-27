@@ -38,7 +38,33 @@
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/81987bf1-309a-4486-91fb-18460f55c649)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/14973698-bd2d-4035-8a03-aa69bfeddd40)
+
+To connect to your EC2 instance named "Docker-server" using MobaXterm, you can follow these steps:
+
+1. **Open MobaXterm**: Launch MobaXterm on your local machine.
+
+2. **Open SSH Session**:
+   - Click on the "Session" button in the upper-left corner.
+   - Select "SSH" as the session type.
+
+3. **Configure SSH Session**:
+   - In the "Remote host" field, enter the public IP address or the public DNS of your EC2 instance.
+   - In the "Specify username" field, enter the username for your instance. For Amazon Linux 2, the default username is `ec2-user`.
+   - In the "Advanced SSH settings" section, go to the "Use private key" field and select your .pem private key file that you downloaded when launching the instance.
+   - Optionally, you can set a name for your session in the "Saved sessions" field to easily access it later.
+
+4. **Connect**:
+   - Click on the "OK" button to initiate the SSH connection.
+
+5. **Authenticate**:
+   - If prompted, confirm the connection and authenticate using the private key.
+
+6. **Accessing the Instance**:
+   - Once connected, you should have command-line access to your EC2 instance through MobaXterm.
+
+Ensure that your EC2 instance is up and running and that your security group allows SSH traffic (port 22) from your IP address. Also, make sure you've set the appropriate permissions (`chmod 400`) on your .pem key file to ensure it's secure.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/14973698-bd2d-4035-8a03-aa69bfeddd40)
 
 d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1b546968-98cc-4293-84e6-356ae56c6e9e)
 
