@@ -111,11 +111,17 @@ After connecting to your EC2 instance using SSH through MobaXterm, you can run t
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bdbd1623-55c5-4699-af7a-4968e9e757e7)
 
-Tomcat Container
+1. **Open your web browser**: Navigate to your preferred web browser.
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fcab069a-26cd-4796-8a4d-e6f9c757a3e2)
+2. **Go to Docker Hub**: Enter the URL https://hub.docker.com/ in the address bar and press Enter.
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6da612d6-9b31-4b53-a680-135834d24246)
+3. **Search for Tomcat image**: In the search bar at the top of the Docker Hub website, type "tomcat" and press Enter or click on the search icon.
+
+4. **Browse Tomcat images**: Browse through the search results to find the Tomcat image that meets your requirements. There are typically multiple versions available, so choose the one that fits your needs.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fcab069a-26cd-4796-8a4d-e6f9c757a3e2)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6da612d6-9b31-4b53-a680-135834d24246)
 
 c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/54539055-6047-443a-8d96-9723151d5633)
 
