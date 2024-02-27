@@ -123,7 +123,20 @@ After connecting to your EC2 instance using SSH through MobaXterm, you can run t
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6da612d6-9b31-4b53-a680-135834d24246)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/54539055-6047-443a-8d96-9723151d5633)
+1. **Edit the hostname file**:
+   Run the following command to edit the hostname file:
+   ```bash
+   sudo nano /etc/hostname
+   ```
+   
+2. **Change the hostname**:
+   Inside the text editor, modify the hostname to "dockerhost". It should only contain the single word "dockerhost".
+
+3. **Save the changes**:
+   After making the changes, press `Ctrl + O` to save the file, then press `Enter`. Press `Ctrl + X` to exit the editor.
+   
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/54539055-6047-443a-8d96-9723151d5633)
 
 d. init 6
 
