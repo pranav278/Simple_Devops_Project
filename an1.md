@@ -207,7 +207,7 @@ On Ansible Node
 - Copy ssh keys
 ```
 
-Login to Docer server :-
+* Login to Docer server :-
 
 1. **Go inside root by sudo su -**:
    After logging in, switch to the root user using the `sudo su -` command:
@@ -230,17 +230,50 @@ Login to Docer server :-
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/506e29e5-660a-43bf-9fff-9b556402418d)
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/accad171-3ce1-47d1-baa1-22502086313e)
+To add the `ansadmin` user to the sudoers list and grant it sudo privileges, you should edit the sudoers file using the `visudo` command. Here's how you can do it:
 
-Check Passwordauthentication is Enabled or not
+1. As root, run the `visudo` command to open the sudoers file for editing:
+   ```bash
+   visudo
+   ```
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/980041e8-b678-4d6b-833a-6e0f021b55d9)
+2. Add a new line to grant sudo privileges to the `ansadmin` user. The line should look like this:
+   ```
+   ansadmin    ALL=(ALL)       ALL
+   ```
 
-Login to Ansible Server
+   This line allows the `ansadmin` user to run any command with sudo privileges.
+
+
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/accad171-3ce1-47d1-baa1-22502086313e)
+
+To check if password authentication is enabled for SSH on your server, you can inspect the SSH daemon configuration file (`sshd_config`). Here's how you can do it:
+
+
+1. Open the SSH daemon configuration file (`sshd_config`) using a text editor. Typically, this file is located at `/etc/ssh/sshd_config`:
+   ```bash
+   sudo nano /etc/ssh/sshd_config
+   ```
+
+2. Look for the line that starts with `PasswordAuthentication`. This line determines whether password authentication is enabled. It should look like this:
+   ```
+   PasswordAuthentication yes
+   ```
+
+3. If the value is set to `yes`, it means password authentication is enabled. If it's set to `no`, password authentication is disabled.
+
+4. Make any necessary changes to the `PasswordAuthentication` line. If you had to make changes, save the file and exit the text editor.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/980041e8-b678-4d6b-833a-6e0f021b55d9)
+
+
+* Login to Ansible Server :-
 
 Add Docker Server as a managed node in ansible inventory
 
-get  ip of docker server
+Get ip of docker server
 
 1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d43ba79d-6ea7-409f-857d-6776532cdd49)
 
