@@ -275,7 +275,12 @@ Add Docker Server as a managed node in ansible inventory
 
 Get ip of docker server
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d43ba79d-6ea7-409f-857d-6776532cdd49)
+Here's how you can use `ifconfig` to view network interface information:
+
+```bash
+ifconfig
+```
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d43ba79d-6ea7-409f-857d-6776532cdd49)
 
 2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8d2593da-1cf8-419e-aeba-5d83cfdfac01)
 
