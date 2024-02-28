@@ -167,14 +167,46 @@ docker images
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/839e5c9f-c704-42ee-874c-4ed469d6f914)
 
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3d2510e7-0a52-43f4-ba81-e4abc0fdb28b)
+The `docker run` command you provided is used to start a new Docker container based on the Tomcat image, mapping port 8080 from the container to port 8081 on the host system. Here's a breakdown of the command:
 
-Accessing
+```
+docker run -d --name tomcat-container -p 8081:8080 tomcat
+```
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c7bd9fe6-ce70-42f9-82c5-a7244cf9aca3)
 
-open 8081 port
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/40f24703-e215-4891-9e44-3c2e3dbf319e)
+- `-d`: This flag runs the container in detached mode, meaning it runs in the background.
+- `--name tomcat-container`: This flag assigns the name "tomcat-container" to the running container.
+- `-p 8081:8080`: This flag maps port 8080 from the container to port 8081 on the host system. This means that you can access the Tomcat server running inside the container via port 8081 on the host system.
+- `tomcat`: This is the name of the Docker image that you want to use to create the container. In this case, it's the official Tomcat image from Docker Hub
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3d2510e7-0a52-43f4-ba81-e4abc0fdb28b)
+
+Tomcat image, and you will be able to access the Tomcat server running inside the container by navigating to http://localhost:8081
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c7bd9fe6-ce70-42f9-82c5-a7244cf9aca3)
+
+To allow traffic on port 8081, you need to ensure that the security group associated with your EC2 instance allows inbound traffic on that port.
+
+Here are the steps to open port 8081 in the security group:
+
+1. **Go to the EC2 Dashboard**: Navigate to the EC2 dashboard in the AWS Management Console.
+
+2. **Select your Instance**: Click on the instance that you're running your Docker container on.
+
+3. **Find Security Group**: Scroll down to the "Description" tab and find the "Security groups" section. Click on the linked security group name.
+
+4. **Edit Inbound Rules**: In the Security Group dashboard, select the "Inbound rules" tab.
+
+5. **Add Rule**: Click the "Edit inbound rules" button, then click "Add rule".
+
+6. **Configure Rule**:
+   - For "Type", select "Custom TCP Rule".
+   - For "Port range", enter "8081".
+   - For "Source", enter "0.0.0.0/0" to allow traffic from any IP address. Alternatively, you can specify a specific IP range if you want to restrict access.
+
+7. **Save Changes**: Click the "Save rules" button to apply the changes.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/40f24703-e215-4891-9e44-3c2e3dbf319e)
 
 c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/af370adb-a762-4ae1-9164-1fc256734899)
 
