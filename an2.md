@@ -59,6 +59,9 @@ Now Check with Ansible Public ip
 
 a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65ba00e5-786d-4d14-af74-18f846a5e276)
 
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c6037bd9-98d7-4c92-b463-013e99a3bc85)
+
+
 
 
 
