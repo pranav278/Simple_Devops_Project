@@ -282,7 +282,36 @@ ifconfig
 ```
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d43ba79d-6ea7-409f-857d-6776532cdd49)
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a0acf43-518c-4dda-9e03-515790425e66)
+
+
 2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8d2593da-1cf8-419e-aeba-5d83cfdfac01)
+
+3. we need to keep secure this keys
+
+4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d9e4a05b-f457-4f97-9fad-7e7f1180b611)
+
+Add these keys to remote system 
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0b22433a-9ebd-4e1e-9c53-2cb09dd600ed)
+
+Highlighted ip is the Private ip of Docker server
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/92e77f22-66de-4555-89bb-4d33638be4bb)
+
+
+Keys are copied to remote server ( authorised keys )
+
+
+Able to connect to systems
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/cccb18a8-12f3-4b7a-ab39-a32ee92209d5)
+
+Now Ansible able to connect with our docker without any Credentials
+
+
+
+
 
 
  
