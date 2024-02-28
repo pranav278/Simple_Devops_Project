@@ -31,6 +31,40 @@ a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9
 
 b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/80a61987-f20c-4c27-a9d5-4f4d4d2975c7)
 
+## Build an Image and Create container on Ansible
+
+Install Docker on Ansible-server as a user
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6474a8a5-86bd-4d54-b909-c9261636c3ac)
+
+
+Add ansadmin to the Docker Group 
+
+A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2929ba5a-7479-432a-bf61-5343ffbc423e)
+
+B. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/36b2ce82-d996-44df-a690-46e2dd444eee)
+
+Create Dockerfile on Ansible Server
+
+A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a599455-3f83-4e73-b150-6d707d1f2c99)
+
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d2a639e7-e7c2-4a48-b032-5ee4a9241d07)
+
+c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a5d7fffb-c8fb-4956-8bc8-8087e45851a0)
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8c07c791-0574-48fe-a592-268a6a608ab5)
+
+Now Check with Ansible Public ip 
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65ba00e5-786d-4d14-af74-18f846a5e276)
+
+
+
+
+
+
+
 
 
 
