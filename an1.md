@@ -194,6 +194,44 @@ ssh-keygen
 
 ## integrate docker with ansible
 
+* Manage Dockerhost with Ansible
+
+```
+On Docker Server
+- Create ansadmin
+- Add ansadmin to sudoers files
+- nable Password based login
+
+On Ansible Node
+- Add hosts file
+- Copy ssh keys
+```
+
+Login to Docer server
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/506e29e5-660a-43bf-9fff-9b556402418d)
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/accad171-3ce1-47d1-baa1-22502086313e)
+
+Check Passwordauthentication is Enabled or not
+
+c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/980041e8-b678-4d6b-833a-6e0f021b55d9)
+
+Login to Ansible Server
+
+Add Docker Server as a managed node in ansible inventory
+
+get  ip of docker server
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d43ba79d-6ea7-409f-857d-6776532cdd49)
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8d2593da-1cf8-419e-aeba-5d83cfdfac01)
+
+
+ 
+
+
+
 
 
 
