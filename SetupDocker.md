@@ -156,9 +156,16 @@ This command will pull the latest version of the Tomcat image by default. If you
 
 
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5bc6051a-4aba-488f-98a6-0da78484c24a)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5bc6051a-4aba-488f-98a6-0da78484c24a)
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/839e5c9f-c704-42ee-874c-4ed469d6f914)
+
+To list all Docker images that are currently downloaded on your system, you can use the following command:
+
+```bash
+docker images
+```
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/839e5c9f-c704-42ee-874c-4ed469d6f914)
 
 3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3d2510e7-0a52-43f4-ba81-e4abc0fdb28b)
 
