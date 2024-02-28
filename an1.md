@@ -282,6 +282,16 @@ ifconfig
 ```
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d43ba79d-6ea7-409f-857d-6776532cdd49)
 
+To add the public IP address of a Docker server to your Ansible inventory, follow these steps:
+
+1. Open the Ansible hosts file using a text editor. You can use `sudo` to edit it with elevated privileges:
+
+```bash
+sudo nano /etc/ansible/hosts
+```
+
+After adding the Docker server to your Ansible inventory, you can manage it like any other host using Ansible commands and playbooks. 
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a0acf43-518c-4dda-9e03-515790425e66)
 
 
