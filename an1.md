@@ -207,9 +207,28 @@ On Ansible Node
 - Copy ssh keys
 ```
 
-Login to Docer server
+Login to Docer server :-
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/506e29e5-660a-43bf-9fff-9b556402418d)
+1. **Go inside root by sudo su -**:
+   After logging in, switch to the root user using the `sudo su -` command:
+
+   ```bash
+   sudo su -
+   ```
+
+   This command will prompt you for the root user's password. Enter the password to switch to the root user.
+
+2. **Create Ansible User ansadmin with Password**:
+   Once you're logged in as the root user, you can create a new user named `ansadmin` with a password. Use the `useradd` and `passwd` commands to achieve this:
+
+   ```bash
+   useradd -m ansadmin  # Create the user with home directory
+   passwd ansadmin      # Set a password for the user
+   ```
+
+   You will be prompted to enter and confirm the password for the `ansadmin` user.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/506e29e5-660a-43bf-9fff-9b556402418d)
 
 b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/accad171-3ce1-47d1-baa1-22502086313e)
 
