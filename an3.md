@@ -60,9 +60,49 @@ Now it showing for both because we copied both the keys
 
 ### lets Create the simple Ansible Playbook
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5b024e08-9666-4a24-8170-41016fb07933)
+```yaml
+---
+- hosts: ansible
+  tasks:
+    - name: Create Docker Image
+      command: docker build -t regapp:latest .
+      args:
+        chdir: /opt/docker
+```
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a0b10298-44f5-46ec-b6a8-779d893a996e)
+Explanation:
+
+- `hosts: ansible`: This specifies that the tasks in this playbook should be executed on hosts listed under the `ansible` group in your Ansible inventory file.
+  
+- `tasks`: This is where you define the tasks to be executed.
+
+- `- name: Create Docker Image`: This is a task name for better readability and identification.
+
+- `command`: This specifies the shell command to be executed, which in this case is `docker build -t regapp:latest .`, where:
+  - `docker build` is the Docker command to build an image.
+  - `-t regapp:latest` tags the image with the name `regapp` and the tag `latest`.
+  - `.` indicates that the Dockerfile is located in the current directory.
+
+- `args`: This is used to provide additional arguments to the command.
+  
+- `chdir: /opt/docker`: This sets the working directory to `/opt/docker`, meaning that the `docker build` command will be executed in this directory where the Dockerfile is located.
+
+Make sure your inventory file has the `ansible` group defined and that the hosts you want to target are listed under this group. Additionally, ensure that your Ansible control node has SSH connectivity to these hosts and that Docker is installed and running on them.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5b024e08-9666-4a24-8170-41016fb07933)
+
+Running `ansible-playbook regapp.yml --check` with the `--check` flag means Ansible will perform a "dry run". It will simulate the execution of the playbook without actually making any changes on the target hosts. Instead, it will report what changes would have been made.
+
+Here's how you would run it:
+
+```bash
+ansible-playbook regapp.yml --check
+```
+
+This is useful for verifying what actions Ansible would take without making any actual changes. It's a good practice to use `--check` before applying changes, especially in production environments, to avoid unintended consequences.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a0b10298-44f5-46ec-b6a8-779d893a996e)
 
 ## Copy Imange on the dockerhub
 
