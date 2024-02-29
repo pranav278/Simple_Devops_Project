@@ -257,9 +257,26 @@ Make sure that the source directory `/usr/local/tomcat/webapps.dist/` contains t
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5143b378-e177-4f27-8608-20628aa00363)
 
-   2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/17bd7f75-ba09-4c1c-99b5-0abab93da251)
+ 
+Build a Docker image with a specified tag would be:
+
+```bash
+docker build -t demotomcat .
+```
+
+This command tells Docker to build an image based on the Dockerfile in the current directory (`.`) and tag it with the name `demotomcat`. 
+ 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/17bd7f75-ba09-4c1c-99b5-0abab93da251)
   
-   3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/59e213a7-bbb4-44d2-be57-4a20b3926c46)
+To list all Docker images currently available on your system, you can use the `docker images` command. Here's how you would use it:
+
+```bash
+docker images
+```
+
+Running this command will display a list of Docker images along with details such as the repository, tag, image ID, creation date, and size. This information can be helpful for managing your Docker images and containers.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/59e213a7-bbb4-44d2-be57-4a20b3926c46)
   
    4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e57a0500-c81b-476e-b7eb-c3661a3395c7)
   
