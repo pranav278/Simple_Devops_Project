@@ -460,26 +460,29 @@ So Now its Created, Lets automate with Jenkisn
 
 ### Jenkins CI/CD to deploy on Contaner Using Ansible
 
+1. Make the Chnages in Exec Command add our deply.yml file including path
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ae7cf16b-b390-44f7-86f1-d3b9f66034a9)
-
-
-Lets make change in index.jsp file
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ae7cf16b-b390-44f7-86f1-d3b9f66034a9)
 
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1a0ea02-8fc7-4d2e-9c6e-91fc71838e87)
-
-Lets Build and See
+* Lets make change in index.jsp file
 
 
-A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/601a4f20-f210-46bb-ae6d-d954787041ba)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1a0ea02-8fc7-4d2e-9c6e-91fc71838e87)
 
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b1fd7199-273e-4061-b5f1-c0911a9ebe1b)
+* Lets Build it and See
 
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/601a4f20-f210-46bb-ae6d-d954787041ba)
 
-B. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/537a37c9-acca-4a17-ad24-2294afc1b92c)
+* Container and images created Successfully.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b1fd7199-273e-4061-b5f1-c0911a9ebe1b)
+
+* Lets Check on Our Browser 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/537a37c9-acca-4a17-ad24-2294afc1b92c)
 
 
 
