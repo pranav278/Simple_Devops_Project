@@ -28,6 +28,118 @@ b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a
 
 ## Copy Imange on the dockerhub
 
+1. Create Dockerhub acccount
+
+2. To commit your image to Dockerhub you need login account through ansible-server
+
+login to dockerhub
+
+3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/21d1aec4-cb34-4df5-bb16-d2a54138eed1)
+
+We cannot direclty Push to Dockerpush because it could not Reconize account
+
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/55ea2d1e-7676-41b1-bf32-bb6fe89ce90e)
+
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/58d975ac-184f-44c6-a010-c3aefef911eb)
+
+
+c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c2272f14-9ebf-4e3f-bbc1-dd3bea3926ea)
+
+
+d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d5ec559f-b7f3-4652-93b3-fc1798f0646d)
+
+## Jenkins Job to Build an Imange onto Ansible
+
+Modify Changes in our yml file
+```
+---
+- hosts: ansible
+
+  tasks:
+  - name: Create Docker Image
+    command: docker build -t regapp:latest .
+    args:
+     chdir: /opt/docker
+
+  - name: Creat tag to push image onto dockerhub
+    command: docker tag regapp:latest pranav280499/regapp:latest
+
+  - name: push docker image
+    command: docker push pranav280499/regapp:latest
+
+```
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0d34331b-34fb-4029-8b82-963693ad6ed2)
+
+Now check the file
+
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c0b173dd-c0e9-489c-aaef-f3a795856dd5)
+
+Limits
+
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3070a439-d610-4ca0-9b74-05e2dd6ca5ff)
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/624a0674-9467-4757-8c74-cd583fcd6d18)
+
+
+Enable Poll SCM alos
+
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ba4ca1be-b7e5-4172-a59d-0c52e254efb1)
+
+Lets Make Changes in index.jsp file through GIT 
+
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2e62042d-89fc-4c09-94a6-e96b2fd853aa)
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4f17365b-7ae0-41dd-8cec-5c4b244a7cf8)
+
+
+3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/be80efd1-1953-4a6a-a62b-ead553fbdbff)
+
+
+4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9f175a4a-053c-49ae-8f6d-e3af07cc73d3)
+
+## Create Container on Dockerhost using Ansibleplaybook
+```
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: create container
+    command: docker run -d --name regapp-server -p 8082:8080 pranav280499/regapp:latest
+```
+
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f32578eb-e405-4558-b51e-1901e91dd3af)
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d52dd5e0-83ab-4d49-b234-5ff6a571b043)
+
+
+3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/12b8b7f2-00f3-43dc-8c79-690c51338875)
+
+login to Dockerhost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
