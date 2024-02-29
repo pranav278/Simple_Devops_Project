@@ -150,18 +150,67 @@ vi Dockerfile
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a599455-3f83-4e73-b150-6d707d1f2c99)
 
+Here's how you can write this into your Dockerfile:
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d2a639e7-e7c2-4a48-b032-5ee4a9241d07)
+```Dockerfile
+# Use the official Tomcat image as the base
+FROM tomcat:latest
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a5d7fffb-c8fb-4956-8bc8-8087e45851a0)
+# Copy contents of webapps.dist into webapps directory
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8c07c791-0574-48fe-a592-268a6a608ab5)
+# Copy your .war files into the webapps directory
+COPY *.war /usr/local/tomcat/webapps/
+```
 
-Now Check with Ansible Public ip 
+Let me explain the commands:
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65ba00e5-786d-4d14-af74-18f846a5e276)
+- `FROM tomcat:latest`: This sets the base image as the official Tomcat image.
+  
+- `RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps`: This command copies all the contents from the `webapps.dist` directory in the Tomcat image to the `webapps` directory. The `-R` flag is used for recursively copying subdirectories and files.
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c6037bd9-98d7-4c92-b463-013e99a3bc85)
+- `COPY *.war /usr/local/tomcat/webapps/`: This command copies all `.war` files from the current directory (where your Dockerfile is located) into the `webapps` directory in the Tomcat image.
+
+Make sure your `.war` files are in the same directory as your Dockerfile when you build the Docker image.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d2a639e7-e7c2-4a48-b032-5ee4a9241d07)
+
+To build the Docker image with the provided Dockerfile, you can run the following command:
+
+```bash
+docker build -t regapp:v1 .
+```
+
+Let's break down the command:
+
+- `docker build`: This command is used to build a Docker image.
+- `-t regapp:v1`: This flag tags the built image with the name `regapp` and the tag `v1`.
+- `.`: This specifies the build context. In this case, the Dockerfile is assumed to be in the current directory, and `docker build` will look for it there.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a5d7fffb-c8fb-4956-8bc8-8087e45851a0)
+
+Run a Docker container based on the `regapp:v1` image, intending to map port 8080 from the container to port 8081 on your host machine. 
+
+```bash
+docker run -t --name regapp-server -p 8081:8080 regapp:v1
+```
+
+Let's break down the command:
+
+- `docker run`: This command is used to create and start a Docker container.
+- `-t`: This flag allocates a pseudo-TTY, which is generally used to keep STDIN open.
+- `--name regapp-server`: This flag assigns a name to the container as `regapp-server`.
+- `-p 8081:8080`: This flag maps port 8080 from the container to port 8081 on the host machine.
+- `regapp:v1`: This is the name and tag of the Docker image you want to use to create the container.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8c07c791-0574-48fe-a592-268a6a608ab5)
+
+* Now Check with Ansible Public ip tomcat server is up 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65ba00e5-786d-4d14-af74-18f846a5e276)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c6037bd9-98d7-4c92-b463-013e99a3bc85)
 
 
 
