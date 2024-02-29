@@ -241,30 +241,61 @@ This command will run the tasks defined in the `regapp.yml` playbook, but it wil
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3070a439-d610-4ca0-9b74-05e2dd6ca5ff)
 
+To configure Jenkins to run an Ansible playbook after copying artifacts onto the Ansible server, follow these steps:
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/624a0674-9467-4757-8c74-cd583fcd6d18)
+1. **Go to Jenkins Dashboard**: Log in to Jenkins and navigate to the Jenkins dashboard.
+
+2. **Edit CopyArtifacts_onto_Ansible Job**:
+   - Find and click on the "CopyArtifacts_onto_Ansible" job to edit its configuration.
+
+3. **Add Post-Build Step**:
+   - Scroll down to the "Post-build Actions" section.
+   - Click on "Add post-build step"
+4. **Enter Exec Command**:
+   - In the command field, enter the following command to run the Ansible playbook:
+     ```bash
+     ansible-playbook /opt/docker/regapp.yml 
+     ```
+     Replace `/opt/docker/regapp.yml` with the path to your Ansible playbook.
+     
+
+5. **Enable SCM**:
+   - If your Jenkins job is configured to use source code management (SCM), enable it and configure it according to your requirements.
+
+6. **Schedule Job**:
+   - Set the schedule for the job by specifying the cron expression in the "Build Triggers" section. Use `* * * * *` to trigger the job every minute.
+
+7. **Apply and Save**:
+   - Click on "Apply" and then "Save" to apply the changes to the Jenkins job configuration.
 
 
-Enable Poll SCM alos
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/624a0674-9467-4757-8c74-cd583fcd6d18)
 
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ba4ca1be-b7e5-4172-a59d-0c52e254efb1)
-
-Lets Make Changes in index.jsp file through GIT 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ba4ca1be-b7e5-4172-a59d-0c52e254efb1)
 
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2e62042d-89fc-4c09-94a6-e96b2fd853aa)
+### Lets Make Changes in index.jsp file through GIT and see our job status
+
+Go to the index.jsp file and make Some Change and Push to origin master
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2e62042d-89fc-4c09-94a6-e96b2fd853aa)
+
+Now see our build is triggered and and Finished Sucess 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4f17365b-7ae0-41dd-8cec-5c4b244a7cf8)
+
+See here, webapp.war file generated with latest timestamp 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/be80efd1-1953-4a6a-a62b-ead553fbdbff)
+
+Also new imange pushed to dockerhub 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9f175a4a-053c-49ae-8f6d-e3af07cc73d3)
 
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4f17365b-7ae0-41dd-8cec-5c4b244a7cf8)
-
-
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/be80efd1-1953-4a6a-a62b-ead553fbdbff)
-
-
-4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9f175a4a-053c-49ae-8f6d-e3af07cc73d3)
-
-## Create Container on Dockerhost using Ansibleplaybook
+### Create Container on Dockerhost using Ansibleplaybook
 ```
 ---
 - hosts: dockerhost
