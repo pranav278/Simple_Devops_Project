@@ -142,8 +142,13 @@ sudo service docker start
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/36b2ce82-d996-44df-a690-46e2dd444eee)
 
 Create Dockerfile on Ansible Server
+To edit or create a Dockerfile using the `vi` text editor, you would typically run the following command:
 
-A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a599455-3f83-4e73-b150-6d707d1f2c99)
+```bash
+vi Dockerfile
+```
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a599455-3f83-4e73-b150-6d707d1f2c99)
 
 
 b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d2a639e7-e7c2-4a48-b032-5ee4a9241d07)
