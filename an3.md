@@ -374,7 +374,7 @@ So, Out Container is running up lets see our server page
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0468a1c3-e972-4cef-9b5b-71a2834bd211)
 
 Above error indicates that Container is already Present so lets modify our yml file
-'''
+```
 ---
 - hosts: dockerhost
 
@@ -391,7 +391,7 @@ Above error indicates that Container is already Present so lets modify our yml f
     command: docker run -d --name regapp-server -p 8082:8080 pranav280499/regapp:latest
 
  
-'''
+```
 Explanation:
 
 - `hosts: dockerhost`: Specifies that the tasks in this playbook should be executed on hosts listed under the `dockerhost` group in your Ansible inventory file.
