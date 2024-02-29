@@ -58,7 +58,7 @@ From that point onward, you'll be able to SSH into localhost without being promp
 Now it showing for both because we copied both the keys
 
 
-### lets Create Ansible Playbook
+### lets Create the simple Ansible Playbook
 
 a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5b024e08-9666-4a24-8170-41016fb07933)
 
