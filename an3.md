@@ -392,30 +392,17 @@ Above error indicates that Container is already Present so lets modify our yml f
 
  
 ```
-Explanation:
-
-- `hosts: dockerhost`: Specifies that the tasks in this playbook should be executed on hosts listed under the `dockerhost` group in your Ansible inventory file.
-
-- `tasks`: This is where you define the tasks to be executed.
-
-- `- name: Stop existing Container`: A description for the task for better identification. The `docker stop` command is used to stop the Docker container named `regapp-server`. The `ignore_errors: yes` parameter is used to ignore errors if the container is not running.
-
-- `- name: Remove the container`: This task removes the Docker container named `regapp-server`. The `ignore_errors: yes` parameter is used to ignore errors if the container doesn't exist.
-
-- `- name: Remove image`: This task removes the Docker image `pranav280499/regapp:latest`. The `ignore_errors: yes` parameter is used to ignore errors if the image doesn't exist.
-
-- `- name: Create container`: This task creates a new Docker container named `regapp-server` from the image `pranav280499/regapp:latest` and exposes port 8080 of the container to port 8082 on the Docker host.
-
-Ensure that the `dockerhost` group is properly defined in your Ansible inventory file, and the Docker daemon is running on the target host. Additionally, ensure that you have appropriate permissions to execute Docker commands on the target host.
-
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5914b9ba-6f92-4ff4-b97b-8bc8cda16270)
-
-There is no Containor So we will Get this Error
 
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3b48fb1a-2e2f-42db-b9cd-4e9dafb66c70)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5914b9ba-6f92-4ff4-b97b-8bc8cda16270)
 
-Modify File as
+* There is no Containor So we will Get this belowError
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3b48fb1a-2e2f-42db-b9cd-4e9dafb66c70)
+
+So, Modify File as
+
 ```
 ---
 - hosts: dockerhost
@@ -439,17 +426,39 @@ Modify File as
 
 
 ```
+Explanation:
+
+- `hosts: dockerhost`: Specifies that the tasks in this playbook should be executed on hosts listed under the `dockerhost` group in your Ansible inventory file.
+
+- `tasks`: This is where you define the tasks to be executed.
+
+- `- name: Stop existing Container`: A description for the task for better identification. The `docker stop` command is used to stop the Docker container named `regapp-server`. The `ignore_errors: yes` parameter is used to ignore errors if the container is not running.
+
+- `- name: Remove the container`: This task removes the Docker container named `regapp-server`. The `ignore_errors: yes` parameter is used to ignore errors if the container doesn't exist.
+
+- `- name: Remove image`: This task removes the Docker image `pranav280499/regapp:latest`. The `ignore_errors: yes` parameter is used to ignore errors if the image doesn't exist.
+
+- `- name: Create container`: This task creates a new Docker container named `regapp-server` from the image `pranav280499/regapp:latest` and exposes port 8080 of the container to port 8082 on the Docker host.
+
+Ensure that the `dockerhost` group is properly defined in your Ansible inventory file, and the Docker daemon is running on the target host. Additionally, ensure that you have appropriate permissions to execute Docker commands on the target host.
 
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/80ffef22-0143-4d8a-a878-361a6bfa8d3a)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/80ffef22-0143-4d8a-a878-361a6bfa8d3a)
+
+Now lets run and Check
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d889bcef-cf63-49b7-ae96-471d91eade80)
+
+Check Container and Images are created or not
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/637c3def-c71e-405c-97c3-72e015b62ad4)
 
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d889bcef-cf63-49b7-ae96-471d91eade80)
+So Now its Created, Lets automate with Jenkisn
 
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/637c3def-c71e-405c-97c3-72e015b62ad4)
-
-## Jenkins CI/CD to deploy on Contaner Using Ansible
+### Jenkins CI/CD to deploy on Contaner Using Ansible
 
 
 1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ae7cf16b-b390-44f7-86f1-d3b9f66034a9)
