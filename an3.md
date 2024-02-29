@@ -368,11 +368,12 @@ So, Out Container is running up lets see our server page
 * !! Successfully Running !!
 
 
-If We run playbooks once again, Container alredy Present lets see how to Resolve this issue
+### If We run playbooks once again, Container alredy Present lets see how to Resolve this issue
 
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0468a1c3-e972-4cef-9b5b-71a2834bd211)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0468a1c3-e972-4cef-9b5b-71a2834bd211)
 
+Above error indicates that Container is already Present so lets modify our yml file
 '''
 ---
 - hosts: dockerhost
@@ -390,8 +391,22 @@ If We run playbooks once again, Container alredy Present lets see how to Resolve
     command: docker run -d --name regapp-server -p 8082:8080 pranav280499/regapp:latest
 
  
-```
+'''
+Explanation:
 
+- `hosts: dockerhost`: Specifies that the tasks in this playbook should be executed on hosts listed under the `dockerhost` group in your Ansible inventory file.
+
+- `tasks`: This is where you define the tasks to be executed.
+
+- `- name: Stop existing Container`: A description for the task for better identification. The `docker stop` command is used to stop the Docker container named `regapp-server`. The `ignore_errors: yes` parameter is used to ignore errors if the container is not running.
+
+- `- name: Remove the container`: This task removes the Docker container named `regapp-server`. The `ignore_errors: yes` parameter is used to ignore errors if the container doesn't exist.
+
+- `- name: Remove image`: This task removes the Docker image `pranav280499/regapp:latest`. The `ignore_errors: yes` parameter is used to ignore errors if the image doesn't exist.
+
+- `- name: Create container`: This task creates a new Docker container named `regapp-server` from the image `pranav280499/regapp:latest` and exposes port 8080 of the container to port 8082 on the Docker host.
+
+Ensure that the `dockerhost` group is properly defined in your Ansible inventory file, and the Docker daemon is running on the target host. Additionally, ensure that you have appropriate permissions to execute Docker commands on the target host.
 
 2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5914b9ba-6f92-4ff4-b97b-8bc8cda16270)
 
