@@ -277,12 +277,24 @@ docker images
 Running this command will display a list of Docker images along with details such as the repository, tag, image ID, creation date, and size. This information can be helpful for managing your Docker images and containers.
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/59e213a7-bbb4-44d2-be57-4a20b3926c46)
+
+Running a Docker container with a specific name (`demotomcat-container`), mapping ports (`8085` on the host to `8080` in the container), and specifying the image (`demotomcat`) would be:
+
+```bash
+docker run --name demotomcat-container -p 8085:8080 demotomcat
+```
+
+This command will run a container from the `demotomcat` image, name it `demotomcat-container`, and map port `8085` on the host to port `8080` in the container.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e57a0500-c81b-476e-b7eb-c3661a3395c7)
+
+* Lets, See out tomcat Server is up
   
-   4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/e57a0500-c81b-476e-b7eb-c3661a3395c7)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/caac184b-5557-42fa-aa2d-8774c21933c5)
   
-   5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/caac184b-5557-42fa-aa2d-8774c21933c5)
   
-   integrate docker with jenkins
+### Integrate docker with jenkins
 
    a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fce35dad-8ff1-42ee-9482-76e77cf3113e)
 
