@@ -292,32 +292,67 @@ sudo nano /etc/ansible/hosts
 
 After adding the Docker server to your Ansible inventory, you can manage it like any other host using Ansible commands and playbooks. 
 
+To add an IP address to the Ansible inventory file located at `/etc/ansible/hosts` using the `vi` text editor, you would follow these steps:
+
+1. Open the file in `vi` for editing:
+   ```bash
+   sudo vi /etc/ansible/hosts
+   ```
+2. Press `i` to enter insert mode. This allows you to add content to the file.
+3. Add the IP address in the format `<IP_address>` followed by any additional configuration, such as specifying a group or assigning variables.
+4. Once you've added the IP address or addresses, press `Esc` to exit insert mode.
+5. Save the changes and exit `vi`:
+   - Type `:wq` and press `Enter` to save and quit.
+   - Alternatively, type `:x` and press `Enter` to save and quit.
+
+Here's an example of how your `/etc/ansible/hosts` file might look after adding an IP address:
+
+```plaintext
+Docker Ip
+192.168.1.100
+```
+
+
+
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7a0acf43-518c-4dda-9e03-515790425e66)
 
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8d2593da-1cf8-419e-aeba-5d83cfdfac01)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8d2593da-1cf8-419e-aeba-5d83cfdfac01)
 
-3. we need to keep secure this keys
+* We need to keep secure this keys
 
-4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d9e4a05b-f457-4f97-9fad-7e7f1180b611)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d9e4a05b-f457-4f97-9fad-7e7f1180b611)
 
-Add these keys to remote system 
+The `ssh-copy-id` command is used to securely copy a user's public key to a remote server's `authorized_keys` file, allowing the user to authenticate to the remote server using public key authentication.
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0b22433a-9ebd-4e1e-9c53-2cb09dd600ed)
+To use `ssh-copy-id` to copy your public key to the server with IP address `172.31.39.87`, you would typically run the following command:
 
-Highlighted ip is the Private ip of Docker server
+```bash
+ssh-copy-id 172.31.39.87
+```
+ 
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/92e77f22-66de-4555-89bb-4d33638be4bb)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0b22433a-9ebd-4e1e-9c53-2cb09dd600ed)
+
+* Highlighted ip is the ip of Docker server
+
+* Keys Pairs are copied to remote server ( authorised keys )
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/92e77f22-66de-4555-89bb-4d33638be4bb)
+
+* Now check you Able to connect to systems or not
+* To use Ansible to ping all hosts in your inventory, you can run the following command:
+
+```bash
+ansible all -m ping
+```
+
+This command instructs Ansible to use the `ping` module (`-m ping`) against all hosts (`all`) in your inventory.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/cccb18a8-12f3-4b7a-ab39-a32ee92209d5)
 
 
-Keys are copied to remote server ( authorised keys )
-
-
-Able to connect to systems
-
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/cccb18a8-12f3-4b7a-ab39-a32ee92209d5)
-
-Now Ansible able to connect with our docker without any Credentials
+* Now Ansible able to connect with our docker without any Credentials
 
 
 
