@@ -228,6 +228,28 @@ d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/6
 ## Jenkins CI/CD to deploy on Contaner Using Ansible
 
 
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ae7cf16b-b390-44f7-86f1-d3b9f66034a9)
+
+
+Lets make change in index.jsp file
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1a0ea02-8fc7-4d2e-9c6e-91fc71838e87)
+
+Lets Build and See
+
+
+A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/601a4f20-f210-46bb-ae6d-d954787041ba)
+
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/b1fd7199-273e-4061-b5f1-c0911a9ebe1b)
+
+
+
+B. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/537a37c9-acca-4a17-ad24-2294afc1b92c)
+
+
+
 
 
 
