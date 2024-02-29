@@ -208,17 +208,38 @@ Modify Changes in our yml file
 
 ```
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0d34331b-34fb-4029-8b82-963693ad6ed2)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0d34331b-34fb-4029-8b82-963693ad6ed2)
+
+Explanation:
+
+1. **Create Docker Image**:
+   - This task builds a Docker image with the tag `regapp:latest` from the Dockerfile located in the `/opt/docker` directory.
+
+2. **Create Tag to Push Image onto Docker Hub**:
+   - This task tags the locally built image `regapp:latest` with the tag `pranav280499/regapp:latest`. This step is necessary to prepare the image for pushing it to Docker Hub.
+
+3. **Push Docker Image**:
+   - This task pushes the tagged Docker image `pranav280499/regapp:latest` to Docker Hub. This makes the image available in your Docker Hub repository.
 
 Now check the file
 
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c0b173dd-c0e9-489c-aaef-f3a795856dd5)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c0b173dd-c0e9-489c-aaef-f3a795856dd5)
 
-Limits
+To run the `regapp.yml` playbook with a limit to execute tasks only on the host with the IP address `172.31.46.162`, you can use the `--limit` option with `ansible-playbook`. Here's the command:
 
+```bash
+ansible-playbook regapp.yml --limit 172.31.46.162
+```
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3070a439-d610-4ca0-9b74-05e2dd6ca5ff)
+Explanation:
+- `ansible-playbook`: Command to execute an Ansible playbook.
+- `regapp.yml`: Name of the playbook file.
+- `--limit 172.31.46.162`: Limits execution to the host with the specified IP address.
+
+This command will run the tasks defined in the `regapp.yml` playbook, but it will only execute them on the host with the IP address `172.31.46.162`. This is useful when you want to target specific hosts in your inventory for playbook execution. Make sure that the inventory file (`/etc/ansible/hosts` by default) contains an entry for the host with the specified IP address.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3070a439-d610-4ca0-9b74-05e2dd6ca5ff)
 
 
 2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/624a0674-9467-4757-8c74-cd583fcd6d18)
