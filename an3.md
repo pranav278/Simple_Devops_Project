@@ -127,6 +127,122 @@ Lets Make Changes in index.jsp file through GIT
 
 login to Dockerhost
 
+Delete all the images and Container of Dockerhost
+
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/60a11b68-cb0d-426e-a486-d9c9ceebd801)
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/35a5d61a-7b61-4f66-a6dd-8aed534e0d16)
+
+Now lets try to pull image from dockerhub as a ansadmin using ansibleplaybook
+
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1e8ab9ec-7481-4823-ae74-dc7100279aec)
+
+Its Giving Error Dure to Permission
+
+
+b.![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/543c37ff-5efe-4f30-8423-f96fa7a3ba6f)
+
+
+c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5f006298-fda8-4ba9-ade6-44c6dc89af9a)
+
+Now check image and Container Created or not
+
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/16dc25b1-8df2-4888-b4e1-7646b3f9d3d0)
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2643a7e3-ffc9-42db-80c5-fc4816def8a4)
+
+
+3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/eae8b0a0-d754-44aa-a3ca-b9517f3d7a69)
+
+If We run playbooks once again, Container alredy Present lets see how to Resolve this issue
+
+
+1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/0468a1c3-e972-4cef-9b5b-71a2834bd211)
+
+'''
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: stop existing Container
+    command: docker stop regapp-server
+
+  - name: remove the container
+    command: docker rm regapp-server
+
+  - name: remove imange
+    command: docker rmi  pranav280499/regapp:latest
+  - name: create container
+    command: docker run -d --name regapp-server -p 8082:8080 pranav280499/regapp:latest
+
+ 
+```
+
+
+2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5914b9ba-6f92-4ff4-b97b-8bc8cda16270)
+
+There is no Containor So we will Get this Error
+
+
+a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/3b48fb1a-2e2f-42db-b9cd-4e9dafb66c70)
+
+Modify File as
+```
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: stop existing Container
+    command: docker stop regapp-server
+    ignore_errors: yes
+
+  - name: remove the container
+    command: docker rm regapp-server
+    ignore_errors: yes
+
+  - name: remove image
+    command: docker rmi pranav280499/regapp:latest
+    ignore_errors: yes
+
+  - name: create container
+    command: docker run -d --name regapp-server -p 8082:8080 pranav280499/regapp:latest
+
+
+
+```
+
+
+b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/80ffef22-0143-4d8a-a878-361a6bfa8d3a)
+
+
+c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d889bcef-cf63-49b7-ae96-471d91eade80)
+
+
+d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/637c3def-c71e-405c-97c3-72e015b62ad4)
+
+## Jenkins CI/CD to deploy on Contaner Using Ansible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
