@@ -1,18 +1,43 @@
 # Integrate Ansible with Jenkins
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1ccf21c-161f-4842-b1da-4c27f3ca21ec)
+* Go to Jenkins 
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8caeb4fc-1145-4ea6-ac61-c4d8f891461d)
+1. **Configure SSH Credentials**:
+   - Go to "Manage Jenkins" > "Manage Credentials" > "System" > "Global credentials (unrestricted)" > "Add Credentials".
+   - Choose "SSH Username with private key" as the kind of credentials.
+   - Fill in the necessary information:
+     - Username: `ansadmin`
+     - Private Key: Select "Enter directly" and paste the private key associated with the `ansadmin` user.
+     - ID: Give it a unique ID, e.g., `ansible-ssh-key`.
+     - Description: Provide a meaningful description.
+   - Click "OK" to save the credentials.
 
-Create New Job
 
-A. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/01f3f125-397c-4801-884f-7bde3379feec)
+2. **Configure SSH Server**:
+   - Go to "Manage Jenkins" > "Configure System".
+   - Scroll down to the "SSH Servers" section.
+   - Click on "Add SSH Server" and provide the following information:
+     - Name: `ansible-server`
+     - Hostname: Private IP address of your Ansible server
+     - Credentials: Select the SSH username and private key you added in the previous step (`ansadmin` and the associated private key).
+   - Click "Save" to save the configuration.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a1ccf21c-161f-4842-b1da-4c27f3ca21ec)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8caeb4fc-1145-4ea6-ac61-c4d8f891461d)
+
+
+lets, Create New Job ( CopyArtifacts_onto_Ansible )
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/01f3f125-397c-4801-884f-7bde3379feec)
 
 Remove the Poll SCM
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/69aee5c2-327c-40d6-9a9d-6bcd41e8f87d)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/69aee5c2-327c-40d6-9a9d-6bcd41e8f87d)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/848870d4-0680-4193-ac53-1396e059a4b3)
+Add this Configuration 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/848870d4-0680-4193-ac53-1396e059a4b3)
 
 Create the Remote Directory on Ansible Server
 
