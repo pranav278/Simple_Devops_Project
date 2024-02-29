@@ -208,23 +208,54 @@ Here are the steps to open port 8081 in the security group:
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/40f24703-e215-4891-9e44-3c2e3dbf319e)
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/af370adb-a762-4ae1-9164-1fc256734899)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/af370adb-a762-4ae1-9164-1fc256734899)
 
-Fixing Tomcat Container Issue
+* lets Fix above Tomcat Container Issue
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a3b322b5-6a33-4b1f-a195-652ba1f10ba9)
+ Syntax for executing a bash shell inside a Docker container named `tomcat-container` would be:
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fc71abf0-03e3-4c43-931c-4792aa1b0052)
+```
+docker exec -it tomcat-container /bin/bash
+```
 
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/81ce55dc-5c2f-4948-8970-900facf67d1a)
 
-4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d8dd8452-022d-439e-b9ab-bcf8c10f0044)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a3b322b5-6a33-4b1f-a195-652ba1f10ba9)
 
-   This changes done is Temporary so we creat docker file
+Here is command to recursively copy all files and directories into the `webapps` directory would be:
 
-   lets understand how can we do through dockerfile
+```bash
+cp -R * ../webapps/
+```
 
-   1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5143b378-e177-4f27-8608-20628aa00363)
+This command copies all files and directories (except those whose names begin with a dot) from the current directory into the `webapps` directory located one level above the current directory. Make sure you're in the correct directory before executing this command to ensure that you copy the intended files and directories.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fc71abf0-03e3-4c43-931c-4792aa1b0052)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/81ce55dc-5c2f-4948-8970-900facf67d1a)
+
+* Now check our Tomcat server is up
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d8dd8452-022d-439e-b9ab-bcf8c10f0044)
+
+
+* This changes done Temporary so we creat docker file
+
+* lets understand how can we do through dockerfile
+
+Dockerfile instruction:
+
+```Dockerfile
+FROM tomcat:latest
+
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+```
+
+This instruction will use the `tomcat:latest` base image, then it will run the `cp` command to recursively copy all files and directories from `/usr/local/tomcat/webapps.dist/` to `/usr/local/tomcat/webapps` within the container.
+
+Make sure that the source directory `/usr/local/tomcat/webapps.dist/` contains the files you want to copy, and the destination directory `/usr/local/tomcat/webapps` exists within the container.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5143b378-e177-4f27-8608-20628aa00363)
 
    2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/17bd7f75-ba09-4c1c-99b5-0abab93da251)
   
