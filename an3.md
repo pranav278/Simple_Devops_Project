@@ -23,9 +23,21 @@ Look for the interface connected to the internet (it's usually marked as "inet" 
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/90560310-d017-4e86-b8de-e8b914197c4a)
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ad071d5e-e173-4ab2-b403-d812466d12c8)
+In summary, the effect of editing the Ansible inventory file to include the public IP of the Ansible server ensures that Ansible can target and manage the server effectively during playbook runs or any other Ansible operations.
 
-Able to Connect with docker but not ansible because keys are not present
+
+The command you would run to display the uptime for all hosts using Ansible is:
+
+```bash
+ansible all -a "uptime"
+```
+Ansible Inventory: Ansible will look at the inventory file specified by default (/etc/ansible/hosts or any other specified inventory file) to determine which hosts to connect to. If you have hosts listed under the [all] group or another group specified after ansible, it will target those hosts.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/ad071d5e-e173-4ab2-b403-d812466d12c8)
+
+It seems like you're experiencing an issue where Ansible is able to connect to Docker hosts but not to the Ansible server itself. This could indeed be due to SSH keys not being copied to the Ansible server.
+
+
 
 1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5807122c-d524-4231-a8f2-dd9eaa30b76e)
 
