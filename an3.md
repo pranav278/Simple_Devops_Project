@@ -38,14 +38,27 @@ Ansible Inventory: Ansible will look at the inventory file specified by default 
 It seems like you're experiencing an issue where Ansible is able to connect to Docker hosts but not to the Ansible server itself. This could indeed be due to SSH keys not being copied to the Ansible server.
 
 
+Running `ssh-copy-id localhost` will copy your SSH public key to the `~/.ssh/authorized_keys` file on the localhost itself. This allows you to SSH into the localhost without needing to enter a password, assuming SSH key authentication is enabled.
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5807122c-d524-4231-a8f2-dd9eaa30b76e)
+Here's how you can run it:
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a32b3867-3c6b-4d8a-9edd-51e5df5af8ae)
+```bash
+ssh-copy-id localhost
+```
+
+After running this command, you'll be prompted to enter the password for your user account on the localhost. Once you enter the password, your SSH public key will be appended to the `authorized_keys` file in the `~/.ssh` directory of your localhost's user account.
+
+From that point onward, you'll be able to SSH into localhost without being prompted for a password, as long as your SSH configuration allows key-based authentication.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5807122c-d524-4231-a8f2-dd9eaa30b76e)
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a32b3867-3c6b-4d8a-9edd-51e5df5af8ae)
 
 Now it showing for both because we copied both the keys
 
-Now Create Ansible Playbook
+
+### lets Create Ansible Playbook
 
 a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5b024e08-9666-4a24-8170-41016fb07933)
 
