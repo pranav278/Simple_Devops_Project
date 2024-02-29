@@ -1,10 +1,23 @@
 # Ansible Playbook to Create image and Container 
 
-1. Login to Ansible-Server as ansadmin
+
+
+First Login to Ansible-Server as ansadmin
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/8edc6442-a348-44e1-9804-096b806e2875)
 
-2. Copy the Public ip of Ansiber-server and Paste it into inventory
+
+To copy the public IP address of the Ansible server using the `ifconfig` command and then paste it into the Ansible inventory file, you can follow these steps:
+
+1. Use the `ifconfig` command to find the public IP address. If the Ansible server is connected to the internet directly, you can find the public IP under the network interface that connects to the internet (usually named something like `eth0` or `ens3`).
+
+Here's how you can find the public IP address using `ifconfig`:
+
+```bash
+ifconfig
+```
+
+Look for the interface connected to the internet (it's usually marked as "inet" or "inet addr"), and note down the associated IP address. It should look something like `x.x.x.x`.
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fe19c2a3-266a-4833-b34c-7ab1551ae870)
 
