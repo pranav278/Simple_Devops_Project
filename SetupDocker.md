@@ -296,26 +296,88 @@ This command will run a container from the `demotomcat` image, name it `demotomc
   
 ### Integrate docker with jenkins
 
-   a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fce35dad-8ff1-42ee-9482-76e77cf3113e)
 
-   b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5eeae8b1-a8a6-4dc7-ad69-150fe121c624)
+To view the contents of the `/etc/group` file, you can use the `cat` command:
 
-   c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4a201549-eec3-47e7-b5f8-e7cf1df1833c)
+```bash
+cat /etc/group
+```
 
-   dockruser error
+This command will display the contents of the `/etc/group` file on your system. The `/etc/group` file contains information about groups on the system, including group names, group IDs, and a list of users who are members of each group.
 
-   1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/63cccc92-bd3b-4984-91a8-e4e2c49e5879)
-  
-   2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/02eeae5e-ee2b-4644-aa99-cc38c40e368e)
+Verify Docker user is here or not
+The `useradd` command is used to create a new user account on Unix-like operating systems. To create a new user named `dockeradmin`, you can use the following command:
 
+```bash
+sudo useradd dockeradmin
+```
+
+This command will create a new user account named `dockeradmin` on your system. By default, the `useradd` command creates a new user account with a home directory at `/home/dockeradmin`. However, you might want to specify additional options such as setting the home directory or assigning the user to specific groups depending on your requirements.
+
+After creating the user account, you might also want to set a password for the new user using the `passwd` command:
+
+```bash
+sudo passwd dockeradmin
+```
+
+This command will prompt you to enter and confirm a password for the `dockeradmin` user. Once you've set the password, the user will be able to log in to the system.
   
-   3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c70e5680-ab96-425d-83a1-c0ea2da9374f)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/fce35dad-8ff1-42ee-9482-76e77cf3113e)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5eeae8b1-a8a6-4dc7-ad69-150fe121c624)
+
+Add the user `dockeradmin` to the `docker` group using the `usermod` command. However, the syntax you provided is incorrect. The correct syntax for adding a user to a group with `usermod` is:
+
+```bash
+sudo usermod -aG docker dockeradmin
+```
+
+In this command:
+
+- `usermod` is the command to modify a user's account.
+- `-aG` is an option specifying that you want to append (`-a`) the user to a group (`-G`).
+- `docker` is the group you want to add the user to.
+- `dockeradmin` is the user you want to add to the group.
+
+After running this command, the user `dockeradmin` will be added to the `docker` group, allowing them to execute Docker commands without needing to use `sudo`. Remember that the changes will only take effect the next time the user logs in.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/4a201549-eec3-47e7-b5f8-e7cf1df1833c)
+
+* Try to login using Dockeruser but it will gets error 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/63cccc92-bd3b-4984-91a8-e4e2c49e5879)
   
-   4. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/27d300bc-c27d-4c95-88c4-3cce1786af04)
+To enable password authentication in the SSH server configuration file (`sshd_config`), you can use a text editor like `vi` to modify the file. Here's how you can do it:
+
+```bash
+sudo vi /etc/ssh/sshd_config
+```
+
+This command opens the `sshd_config` file in the `vi` text editor with superuser privileges.
+
+Once you're in the `vi` editor, you need to find the line that controls password authentication. Look for a line that begins with `#PasswordAuthentication` (note the `#` at the beginning, which comments out the line). If you find this line, remove the `#` to uncomment it. If you don't find the line, you can add it.
+
+Change or add the line to read:
+
+```
+PasswordAuthentication yes
+```
+
+This line enables password authentication for SSH.  
+   
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/02eeae5e-ee2b-4644-aa99-cc38c40e368e)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c70e5680-ab96-425d-83a1-c0ea2da9374f)
   
-   5. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/85dd34a6-8d8d-4438-8103-4a13478e05c3)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/27d300bc-c27d-4c95-88c4-3cce1786af04)
   
-   6. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/91ddb02d-e7b3-4076-bfe2-5364e1750bb7)
+The command you provided, service sshd reload, is used to reload the SSH server configuration without disconnecting active SSH sessions  
+   
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/85dd34a6-8d8d-4438-8103-4a13478e05c3)
+  
+* Now you can login as dockeradmin  
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/91ddb02d-e7b3-4076-bfe2-5364e1750bb7)
 
 
    Login to Jenkins
