@@ -39,13 +39,25 @@ Add this Configuration
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/848870d4-0680-4193-ac53-1396e059a4b3)
 
-Create the Remote Directory on Ansible Server
+To create a remote directory named "docker" and change its permissions using the command line, you would typically use SSH to connect to the remote server and then execute the necessary commands. Here's how you can do it:
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/dee8df72-b48f-4bc1-bc20-1c8a13a38c79)
+1. **Create Remote Directory**:
+   
+   ```
+   mkdir docker
+   ```
 
-Change the Permission 
+   Replace `username` with your actual username and `remote_host` with the hostname or IP address of the remote server.
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1b88832c-a32d-4457-a09e-0e8fac51a422)
+2. **Change Permissions**:
+
+   ```
+   sudo chown ansadmin:ansadmin docker
+   ```
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/dee8df72-b48f-4bc1-bc20-1c8a13a38c79)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1b88832c-a32d-4457-a09e-0e8fac51a422)
 
 3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2cde069e-7ac6-4007-9e7d-df17d2d369df)
 
