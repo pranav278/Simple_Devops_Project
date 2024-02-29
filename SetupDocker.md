@@ -380,17 +380,56 @@ The command you provided, service sshd reload, is used to reload the SSH server 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/91ddb02d-e7b3-4076-bfe2-5364e1750bb7)
 
 
-   Login to Jenkins
+To add the "Publish over SSH" plugin to Jenkins, you typically follow these steps:
 
-   a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/587774b6-69c6-48ef-998e-3779ee18a78f)
+1. **Login to Jenkins**: Open your web browser and navigate to your Jenkins instance.
 
-   Private ip
+2. **Access Plugin Manager**: Once logged in, click on "Manage Jenkins" in the sidebar.
 
-   b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/29a18eb9-ecb6-418b-b632-6fdee0708e64)
+3. **Install Plugins**: Under "Manage Jenkins", click on "Manage Plugins". Here, you'll find a list of available plugins.
 
-   c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/213eed6d-26c8-4bca-a25d-23c10d6318d0)
+4. **Find "Publish over SSH" Plugin**: In the "Available" tab, use the search box to find the "Publish over SSH" plugin.
 
-   d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1db80f52-03d6-4263-8cb3-01482a58b62b)
+5. **Select Plugin**: Once you find the "Publish over SSH" plugin, check the checkbox next to it.
+
+6. **Install**: Click on the "Install without restart" button. Jenkins will download and install the plugin.
+
+7. **Restart Jenkins**: After the installation is complete, Jenkins will prompt you to restart. Click on the checkbox if you want to restart Jenkins immediately or choose to restart manually later.
+
+8. **Configure Plugin**: After Jenkins restarts, go back to your Jenkins dashboard and navigate to the job where you want to use the "Publish over SSH" plugin. Configure the plugin according to your requirements.
+
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/587774b6-69c6-48ef-998e-3779ee18a78f)
+
+
+To add a SSH server in Jenkins for connecting to your Docker host, you can follow these steps:
+
+1. **Login to Jenkins**: Open your web browser and navigate to your Jenkins instance.
+
+2. **Access Manage Jenkins**: Click on "Manage Jenkins" in the Jenkins dashboard.
+
+3. **Navigate to SSH Servers**: Under "Manage Jenkins", select "Configure System".
+
+4. **Add SSH Server**: Scroll down until you find the "SSH Servers" section. Click on the "Add" button to add a new SSH server configuration.
+
+5. **Fill in SSH Server Details**:
+   - Name: Enter a name for your SSH server, for example, "dockerhost".
+   - Hostname: Enter the private IP address of your Docker host.
+   - Username: Enter the username to use for SSH authentication, which in your case is likely "dockeradmin".
+   - Check "Use password authentication".
+   - Enter the password for the "dockeradmin" user in the provided field.
+
+6. **Test Configuration**: After entering the details, you can click on the "Test Configuration" button to verify that Jenkins can successfully connect to the Docker host using SSH. This will confirm that your configuration is correct.
+
+7. **Save Configuration**: Once you've verified that the configuration works, click on the "Save" or "Apply" button to save your changes.
+
+After completing these steps, Jenkins should be configured to connect to your Docker host using SSH. You can use this SSH server configuration in your Jenkins jobs to perform tasks such as deploying Docker containers or executing commands on the Docker host.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/29a18eb9-ecb6-418b-b632-6fdee0708e64)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/213eed6d-26c8-4bca-a25d-23c10d6318d0)
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1db80f52-03d6-4263-8cb3-01482a58b62b)
 
 
 
