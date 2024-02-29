@@ -306,47 +306,67 @@ Also new imange pushed to dockerhub
 ```
 
 
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f32578eb-e405-4558-b51e-1901e91dd3af)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/f32578eb-e405-4558-b51e-1901e91dd3af)
+
+Explanation:
+
+- `hosts: dockerhost`: Specifies that the tasks in this playbook should be executed on hosts listed under the `dockerhost` group in your Ansible inventory file.
+
+- `tasks`: This is where you define the tasks to be executed.
+
+- `- name: Create Container`: A description for the task for better identification.
+
+- `command`: Specifies the shell command to be executed, which in this case is `docker run -d --name regapp-server -p 8082:8080 pranav280499/regapp:latest`, where:
+  - `docker run` is the command to run a Docker container.
+  - `-d` runs the container in detached mode (background).
+  - `--name regapp-server` sets the name of the container to `regapp-server`.
+  - `-p 8082:8080` maps port 8080 of the Docker container to port 8082 of the Docker host.
+  - `pranav280499/regapp:latest` is the Docker image to use for creating the container.
+
+This playbook will create a Docker container named `regapp-server` from the `pranav280499/regapp:latest` image and expose port 8080 of the container to port 8082 on the Docker host. Make sure that the `dockerhost` group is properly defined in your Ansible inventory file, and the Docker daemon is running on the target host.
 
 
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d52dd5e0-83ab-4d49-b234-5ff6a571b043)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d52dd5e0-83ab-4d49-b234-5ff6a571b043)
+
+Now check the yml file 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/12b8b7f2-00f3-43dc-8c79-690c51338875)
+
+* Now login to Dockerhost Delete all the images and Container of Dockerhost
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/60a11b68-cb0d-426e-a486-d9c9ceebd801)
 
 
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/12b8b7f2-00f3-43dc-8c79-690c51338875)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/35a5d61a-7b61-4f66-a6dd-8aed534e0d16)
 
-login to Dockerhost
-
-Delete all the images and Container of Dockerhost
-
-
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/60a11b68-cb0d-426e-a486-d9c9ceebd801)
-
-
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/35a5d61a-7b61-4f66-a6dd-8aed534e0d16)
 
 Now lets try to pull image from dockerhub as a ansadmin using ansibleplaybook
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1e8ab9ec-7481-4823-ae74-dc7100279aec)
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1e8ab9ec-7481-4823-ae74-dc7100279aec)
+* Its Giving Error Due to Permission
 
-Its Giving Error Dure to Permission
+Give the Permission to error path by chmod
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/543c37ff-5efe-4f30-8423-f96fa7a3ba6f)
+
+Now see its Executing Successfully,.Hope image and Container Gets Created 
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5f006298-fda8-4ba9-ade6-44c6dc89af9a)
+
+Now check image and Container Created or not into docker host
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/16dc25b1-8df2-4888-b4e1-7646b3f9d3d0)
+
+So, Out Container is running up lets see our server page
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2643a7e3-ffc9-42db-80c5-fc4816def8a4)
 
 
-b.![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/543c37ff-5efe-4f30-8423-f96fa7a3ba6f)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/eae8b0a0-d754-44aa-a3ca-b9517f3d7a69)
 
+* !! Successfully Running !!
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/5f006298-fda8-4ba9-ade6-44c6dc89af9a)
-
-Now check image and Container Created or not
-
-
-1. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/16dc25b1-8df2-4888-b4e1-7646b3f9d3d0)
-
-
-2. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/2643a7e3-ffc9-42db-80c5-fc4816def8a4)
-
-
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/eae8b0a0-d754-44aa-a3ca-b9517f3d7a69)
 
 If We run playbooks once again, Container alredy Present lets see how to Resolve this issue
 
