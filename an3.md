@@ -104,31 +104,90 @@ This is useful for verifying what actions Ansible would take without making any 
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a0b10298-44f5-46ec-b6a8-779d893a996e)
 
-## Copy Imange on the dockerhub
+### Copy Imange on the dockerhub
 
-1. Create Dockerhub acccount
+To create a Docker Hub account, follow these steps:
 
-2. To commit your image to Dockerhub you need login account through ansible-server
+1. **Go to Docker Hub Website**: Open your web browser and navigate to the Docker Hub website: [https://hub.docker.com/](https://hub.docker.com/).
 
-login to dockerhub
+2. **Sign Up**: Click on the "Sign Up" button located at the top right corner of the page.
 
-3. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/21d1aec4-cb34-4df5-bb16-d2a54138eed1)
+3. **Fill Out the Form**: Fill out the sign-up form with the required information, including:
+   - Username: Choose a unique username for your Docker Hub account.
+   - Email Address: Provide your email address.
+   - Password: Choose a strong password for your account.
 
-We cannot direclty Push to Dockerpush because it could not Reconize account
+4. **Agree to Terms of Service and Privacy Policy**: Check the box to agree to Docker's terms of service and privacy policy.
+
+5. **Complete Sign Up**: Click on the "Sign Up" button to complete the registration process.
+
+6. **Verify Email (if required)**: Depending on Docker Hub's current policies, you may need to verify your email address by clicking on a link sent to the email you provided during sign-up.
+
+7. **Set Up Docker Hub Account**: Once your account is created and verified (if required), you can log in to Docker Hub using your username and password.
+
+To log in to Docker Hub from the command line using the Docker CLI, follow these steps:
+
+1. Open your terminal or command prompt.
+
+2. Run the following command:
+
+```bash
+docker login
+```
+
+3. You'll be prompted to enter your Docker Hub username and password.
+
+   ```plaintext
+   Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+   Username: your_dockerhub_username
+   Password: your_dockerhub_password
+   ```
+
+   Replace `your_dockerhub_username` with your Docker Hub username and `your_dockerhub_password` with your Docker Hub password.
+
+4. After entering your credentials, press Enter. If the login is successful, you'll see a message indicating that you are logged in.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/21d1aec4-cb34-4df5-bb16-d2a54138eed1)
 
 
-a. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/55ea2d1e-7676-41b1-bf32-bb6fe89ce90e)
+* We cannot direclty Push to Dockerpush because it could not Reconize account, it throws Below error
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/55ea2d1e-7676-41b1-bf32-bb6fe89ce90e)
 
-b. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/58d975ac-184f-44c6-a010-c3aefef911eb)
+To tag a Docker image, you can use the `docker tag` command followed by the image ID and the desired tag. Here's how you can tag the Docker image:
 
+```bash
+docker tag 80b9d41a2669 pranav280499/regapp:latest
+```
 
-c. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c2272f14-9ebf-4e3f-bbc1-dd3bea3926ea)
+Explanation:
+- `80b9d41a2669` is the image ID of the Docker image you want to tag.
+- `pranav280499/regapp:latest` is the new tag you want to assign to the image. This format follows the pattern `[username]/[repository]:[tag]`.
 
+After running this command, the Docker image with the ID `80b9d41a2669` will be tagged with the name `pranav280499/regapp` and the tag `latest`. This allows you to reference the image more conveniently using the new tag.
 
-d. ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d5ec559f-b7f3-4652-93b3-fc1798f0646d)
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/58d975ac-184f-44c6-a010-c3aefef911eb)
 
-## Jenkins Job to Build an Imange onto Ansible
+To push a Docker image to Docker Hub or any other Docker registry, you can use the `docker push` command followed by the image name and tag. Here's how you can push the image `pranav280499/regapp:latest` to Docker Hub:
+
+```bash
+docker push pranav280499/regapp:latest
+```
+
+Explanation:
+- `pranav280499/regapp:latest` is the name of the Docker image along with the tag `latest` that you want to push to Docker Hub. This format follows the pattern `[username]/[repository]:[tag]`.
+
+After running this command, Docker will push the specified image to Docker Hub under your Docker Hub account. Make sure you're logged in to Docker Hub (`docker login`) with appropriate permissions to push images to the repository `pranav280499/regapp`.
+
+Ensure that your Docker image is properly tagged and built before pushing it to the Docker registry.
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c2272f14-9ebf-4e3f-bbc1-dd3bea3926ea)
+
+* See the dockerhub repository, our image will shows
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d5ec559f-b7f3-4652-93b3-fc1798f0646d)
+
+### Jenkins Job to Build an Imange onto Ansible
 
 Modify Changes in our yml file
 ```
