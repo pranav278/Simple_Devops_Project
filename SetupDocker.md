@@ -1,5 +1,13 @@
+# Integrating Docker in CI/CD Pipeline
 
+```
 
+Step 1. Setup Docker Enviroment
+
+```
+Setup Docker Enviroment
+
+## Step 1. Setup Docker Enviroment
 
 1. **Login to AWS Console**: Go to the AWS Management Console and login to your AWS account.
 
@@ -110,6 +118,14 @@ After connecting to your EC2 instance using SSH through MobaXterm, you can run t
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/7d4777de-9997-4d7e-b27f-56ff5154c696)
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bdbd1623-55c5-4699-af7a-4968e9e757e7)
+
+---
+
+
+
+---
+
+## Step 2: Create a Tomcat Container
 
 1. **Open your web browser**: Navigate to your preferred web browser.
 
@@ -240,6 +256,15 @@ This command copies all files and directories (except those whose names begin wi
 
 * This changes done Temporary so we creat docker file
 
+---
+
+
+
+
+---
+
+## Step 3: Create a Docker file
+
 * lets understand how can we do through dockerfile
 
 Dockerfile instruction:
@@ -292,9 +317,14 @@ This command will run a container from the `demotomcat` image, name it `demotomc
 * Lets, See out tomcat Server is up
   
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/caac184b-5557-42fa-aa2d-8774c21933c5)
+
+---
+
+
+
+---
   
-  
-### Integrate docker with jenkins
+## Step 4: Integrate docker with jenkins
 
 
 To view the contents of the `/etc/group` file, you can use the `cat` command:
@@ -400,6 +430,7 @@ To add the "Publish over SSH" plugin to Jenkins, you typically follow these step
 
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/587774b6-69c6-48ef-998e-3779ee18a78f)
+
 
 
 To add a SSH server in Jenkins for connecting to your Docker host, you can follow these steps:
