@@ -226,7 +226,14 @@ Here are the steps to open port 8081 in the security group:
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/af370adb-a762-4ae1-9164-1fc256734899)
 
-* lets Fix above Tomcat Container Issue
+---
+
+
+
+
+--
+
+## Step 3: Fixing Tomcat Container Issue
 
  Syntax for executing a bash shell inside a Docker container named `tomcat-container` would be:
 
@@ -263,7 +270,7 @@ This command copies all files and directories (except those whose names begin wi
 
 ---
 
-## Step 3: Create a Docker file
+## Step 4: Create a Docker file
 
 * lets understand how can we do through dockerfile
 
@@ -324,7 +331,7 @@ This command will run a container from the `demotomcat` image, name it `demotomc
 
 ---
   
-## Step 4: Integrate docker with jenkins
+## Step 5: Integrate docker with jenkins
 
 
 To view the contents of the `/etc/group` file, you can use the `cat` command:
@@ -462,7 +469,12 @@ After completing these steps, Jenkins should be configured to connect to your Do
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/1db80f52-03d6-4263-8cb3-01482a58b62b)
 
+---
 
+
+
+
+---
 
 
 
