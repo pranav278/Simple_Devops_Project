@@ -1,5 +1,8 @@
 # Integrating Tomcat Server in CI/CD
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a6f7ea48-8b98-4e7c-84b4-a32a30b1ebbb)
+
+
 ```
 Step 1:- Launch Amazon Linux 2 Instance and Connect using Mobaxtrame
 Step 2:- Installation of Jenkins on Our Linux Server
