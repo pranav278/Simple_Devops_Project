@@ -10,6 +10,8 @@ This repository contains instructions and configurations for deploying our appli
 
 To deploy our application on a Tomcat server, follow these steps:
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a6f7ea48-8b98-4e7c-84b4-a32a30b1ebbb)
+
 ### Setup CI/CD with GitHub, Jenkins, Maven, and Tomcat
 
 1. **Setup Jenkins:**
@@ -30,6 +32,8 @@ To deploy our application on a Tomcat server, follow these steps:
 ## Deploy Artifacts on a Container
 
 To deploy our application in a Docker container, use the following steps:
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/08dd370c-4b05-43b8-a176-de02e7fd25da)
 
 ### Setup CI/CD with GitHub, Jenkins, Maven, and Docker
 
@@ -72,6 +76,8 @@ For deploying our application on a Docker container using Ansible, follow these 
 ## Deploy Artifacts on Kubernetes
 
 To deploy our application on a Kubernetes cluster, use the following instructions:
+
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/95fcdd42-d75e-470b-a228-24a73bf361c2)
 
 ### CI/CD with GitHub, Jenkins, Maven, Ansible, and Kubernetes
 
