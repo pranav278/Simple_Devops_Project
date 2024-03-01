@@ -1,4 +1,6 @@
-## Ansible Installation 
+# Integrating Ansible in CI/CD Pipeline 
+
+
 ```
 1. Setup EC2 instance
 2. Setup Hostname
@@ -9,8 +11,13 @@
 7. install ansible
 
 ```
+---
 
 
+
+---
+
+## Step 1: Ansible installation
 
 
 1. **Launch EC2 Instance**:
@@ -191,8 +198,13 @@ ssh-keygen
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/bc52dbd8-9813-4044-884e-a6647232dd40)
 
+---
 
-## integrate docker with ansible
+
+
+---
+
+## Step 2: Integrate docker with ansible
 
 * Manage Dockerhost with Ansible
 
@@ -354,7 +366,12 @@ This command instructs Ansible to use the `ping` module (`-m ping`) against all 
 
 * Now Ansible able to connect with our docker without any Credentials
 
+---
 
+
+
+
+---
 
 
 
