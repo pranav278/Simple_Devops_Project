@@ -2,14 +2,15 @@
 
 
 ```
-1. Setup EC2 instance
-2. Setup Hostname
-3. create anadmin user
-4. Add user to sudoers file
-5. Generate ssh keys
-6. Enable password based login
-7. install ansible
-
+Step 1: Ansible installation
+Step 2: Integrate docker with ansible
+Step 3: Integrate Ansible with Jenkins
+Step 4: Build an Image and Create container on Ansible
+Step 5: Ansible Playbook to Create image and Container
+Step 6: Copy Imange on the dockerhub
+Step 7: Jenkins Job to Build an Imange onto Ansible
+Step 8: Create Container on Dockerhost using Ansibleplaybook
+Step 9: Jenkins CI/CD to deploy on Contaner Using Ansible
 ```
 ---
 
