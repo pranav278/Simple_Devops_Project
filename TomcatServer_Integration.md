@@ -1,6 +1,6 @@
 # Integrating Tomcat Server in CI/CD
 
----
+```
 Step 1:- Launch Amazon Linux 2 Instance and Connect using Mobaxtrame
 Step 2:- Installation of Jenkins on Our Linux Server
 Step 3:- Setting Up Jenkins GUI
@@ -8,7 +8,7 @@ Step 4:- Installation & Integrate Maven with Jenkins
 Step 5:- Tomcat Installation & Setup on EC2 Amazon Linux Instance
 Step 6:- Integrate Apache Tomcat with Jenkins
 Step 7:- Deploy Artifact On Tomcat Server ( Use of Bash )
----
+```
 
 ---
 ---
