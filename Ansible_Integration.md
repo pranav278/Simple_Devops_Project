@@ -1,5 +1,7 @@
 # Integrating Ansible in CI/CD Pipeline 
 
+![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/08dd370c-4b05-43b8-a176-de02e7fd25da)
+
 
 ```
 Step 1: Ansible installation
