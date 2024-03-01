@@ -1,5 +1,4 @@
-# Ansible Playbook to Create image and Container 
-
+## Step 5: Ansible Playbook to Create image and Container 
 
 
 First Login to Ansible-Server as ansadmin
@@ -104,7 +103,13 @@ This is useful for verifying what actions Ansible would take without making any 
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/a0b10298-44f5-46ec-b6a8-779d893a996e)
 
-### Copy Imange on the dockerhub
+---
+
+
+
+---
+
+## Step 6: Copy Imange on the dockerhub
 
 To create a Docker Hub account, follow these steps:
 
@@ -187,7 +192,14 @@ Ensure that your Docker image is properly tagged and built before pushing it to 
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/d5ec559f-b7f3-4652-93b3-fc1798f0646d)
 
-### Jenkins Job to Build an Imange onto Ansible
+---
+
+
+
+
+---
+
+## Step 7: Jenkins Job to Build an Imange onto Ansible
 
 Modify Changes in our yml file
 ```
@@ -294,8 +306,13 @@ Also new imange pushed to dockerhub
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/9f175a4a-053c-49ae-8f6d-e3af07cc73d3)
 
+---
 
-### Create Container on Dockerhost using Ansibleplaybook
+
+
+---
+
+## Step 8: Create Container on Dockerhost using Ansibleplaybook
 ```
 ---
 - hosts: dockerhost
@@ -455,10 +472,16 @@ Check Container and Images are created or not
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/637c3def-c71e-405c-97c3-72e015b62ad4)
 
 
-So Now its Created, Lets automate with Jenkisn
+So Now its Created, Lets automate with Jenkins
+
+---
 
 
-### Jenkins CI/CD to deploy on Contaner Using Ansible
+
+
+---
+
+## Step 9: Jenkins CI/CD to deploy on Contaner Using Ansible
 
 1. Make the Chnages in Exec Command add our deply.yml file including path
 
@@ -484,8 +507,9 @@ So Now its Created, Lets automate with Jenkisn
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/537a37c9-acca-4a17-ad24-2294afc1b92c)
 
+---
 
-
+---
 
 
 
