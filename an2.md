@@ -1,4 +1,4 @@
-# Integrate Ansible with Jenkins
+## Step 3: Integrate Ansible with Jenkins
 
 * Go to Jenkins 
 
@@ -97,8 +97,14 @@ To implement the requested changes in the Jenkins job configuration, you need to
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/80a61987-f20c-4c27-a9d5-4f4d4d2975c7)
 
+---
 
-### Build an Image and Create container on Ansible
+
+
+
+---
+
+## Step 4: Build an Image and Create container on Ansible
 
 Install Docker on Ansible-server as a user
 
@@ -211,6 +217,12 @@ Let's break down the command:
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/65ba00e5-786d-4d14-af74-18f846a5e276)
 
 ![image](https://github.com/pranav278/Simple_Devops_Project/assets/84725860/c6037bd9-98d7-4c92-b463-013e99a3bc85)
+
+---
+
+
+
+---
 
 
 
